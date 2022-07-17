@@ -30,19 +30,19 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Weird JavaScript Notes</h3>
+  <h3 align="center">Functional Java Snippets</h3>
 
   <p align="center">
-    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of JavaScript!
+    My lifelong snippets about the functional interfaces 🤖⚙️ and stream API 🧵 features of Java 8 onwards!
     <br />
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://reactjs.org/docs/getting-started.html">React JS Docs</a>
+    <a href="https://java-8-tips.readthedocs.io/en/stable/quickintro.html">Stream API Docs</a>
     ·
-    <a href="https://html-css-js.com/js/">JavaScript Cheat Sheet</a>
+    <a href="https://philvarner.github.io/pages/modern-java.html">Java 8 Cheat Sheet</a>
     ·
-    <a href="http://www.developer-cheatsheets.com/react">React Cheat Sheet</a>
+    <a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-cheat-sheet.html">Stream API Cheat Sheet</a>
   </p>
 </div>
 
@@ -59,10 +59,10 @@
       </ul>
     </li>
     <li>
-      <a href="#decoupling-object-properties">Decoupling Object Properties</a>
+      <a href="#get-an-array-of-map's-keys">Get an Array of Map's Keys</a>
       <ul>
-        <li><a href="#2a-examples">Examples</a></li>
-        <li><a href="#2b-practical-uses">Practical Uses</a></li>
+        <li><a href="#2a-snippets">Snippets</a></li>
+        <li><a href="#2b-explanation">Explanation</a></li>
       </ul>
     </li>
     <li>
@@ -82,9 +82,9 @@
 
 ![Banner][java-logo]
 
-Hello! my name is Colston D. Bod-oy, I'm a React developer and was currently taking my 2nd year of college on the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
+Hello! my name is Colston D. Bod-oy, I'm a React developer and would be taking my 3rd year of college on the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
   
-I created this project so I could keep track and recall things that I didn't know I could do in JavaScript as I've just recently started learning it, hope you'll find these notes useful! 😎.
+I created this project so I could keep track and recall snippets about Java's functional interfaces and stream API as I've just recently started learning it, hope you'll find these notes useful! 😎.
 
 
 ### README Template
@@ -97,31 +97,50 @@ Here's where I got this template btw, also don't forget to follow me on my socia
 
 
 
-<!-- DECOUPLING OBJECT PROPERTIES -->
-## Decoupling Object Properties 
+<!-- GET AN ARRAY OF MAP'S KEYS -->
+## Get an Array of Map's Keys 
 
-We could decouple object properties and use their values as properties of another object.
+This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
-### 2a Examples
+### 2a Snippets
 
-_Notice how we use the bracket notation instead of the dot-notation for the last 2 properties of the cast object, it's because the decoupled values are not valid JavaScript identifiers (for example, a property name that has a space or a hyphen, or that starts with a number)._
+  ```java
+  import java.util.Arrays;
+  import java.util.HashMap;
 
-  ```js
-  const spells = {
-    basic: "fire",
-    special: "high voltage",
-    ultimate: "💧",
+  class Main {
+    public static void main(String[] args) {
+      HashMap<String, Integer> stringsMap = new HashMap<>();
+      stringsMap.put("!V$q", 16087526);
+      stringsMap.put("lW@$", 64992058);
+      stringsMap.put("V*tx", 61656601);
+      stringsMap.put("W*Ru", 77778805);
+      stringsMap.put("b#Oo", 44708273);
+    
+      HashMap<Integer, String> integersMap = new HashMap<>();
+      integersMap.put(16087526, "!V$q");
+      integersMap.put(64992058, "lW@$");
+      integersMap.put(61656601, "V*tx");
+      integersMap.put(77778805, "W*Ru");
+      integersMap.put(44708273, "b#Oo");
+    
+      HashMap<String, String> strNumsMap = new HashMap<>();
+      strNumsMap.put("16087526", "!V$q");
+      strNumsMap.put("64992058", "lW@$");
+      strNumsMap.put("61656601", "V*tx");
+      strNumsMap.put("77778805", "W*Ru");
+      strNumsMap.put("44708273", "b#Oo");
+    
+      System.out.println(Arrays.toString(stringsMap.keySet().stream().toArray()));  
+      // [!V$q, b#Oo, lW@$, W*Ru, V*tx]
+      
+      System.out.println(Arrays.toString(integersMap.keySet().stream().mapToInt(Integer::intValue).toArray()));  
+      // [16087526, 64992058, 61656601, 77778805, 44708273]
+      
+      System.out.println(Arrays.toString(strNumsMap.keySet().stream().mapToInt(Integer::parseInt).toArray())); 
+      // [61656601, 44708273, 77778805, 64992058, 16087526]
+    }
   }
-
-  const cast = {
-    [spells.basic]: "🔥",
-    [spells.special]: "⚡",
-    [spells.ultimate]: "🌊",
-  }
-
-  console.log(cast.fire);            // 🔥
-  console.log(cast["high voltage"]); // ⚡
-  console.log(cast["💧"]);           // 🌊
   ```
 
 ### 2b Practical Uses
