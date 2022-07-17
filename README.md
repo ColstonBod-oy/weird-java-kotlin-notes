@@ -17,12 +17,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![GitHub][github-shield]][github-url]&ensp;
+[![Twitter][twitter-shield]][twitter-url]&ensp;
+[![Reddit][reddit-shield]][reddit-url]&ensp;
 
 
 
@@ -33,19 +30,19 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Weird JavaScript Notes</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of JavaScript!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://reactjs.org/docs/getting-started.html">React JS Docs</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://html-css-js.com/js/">JavaScript Cheat Sheet</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="http://www.developer-cheatsheets.com/react">React Cheat Sheet</a>
   </p>
 </div>
 
@@ -58,22 +55,23 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#readme-template">README Template</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#decoupling-object-properties">Decoupling Object Properties</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#2a-examples">Examples</a></li>
+        <li><a href="#2b-practical-uses">Practical Uses</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#immediately-invoked-function-expression">Immediately Invoked Function Expression</a>
+      <ul>
+        <li><a href="#3a-examples">Examples</a></li>
+        <li><a href="#3b-practical-uses">Practical Uses</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -82,155 +80,216 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Banner][java-logo]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Hello! my name is Colston D. Bod-oy, I'm a React developer and was currently taking my 2nd year of college on the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
+  
+I created this project so I could keep track and recall things that I didn't know I could do in JavaScript as I've just recently started learning it, hope you'll find these notes useful! 😎.
 
 
+### README Template
 
-### Built With
+Here's where I got this template btw, also don't forget to follow me on my social media links.
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+👉 [📒](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- DECOUPLING OBJECT PROPERTIES -->
+## Decoupling Object Properties 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+We could decouple object properties and use their values as properties of another object.
 
-### Prerequisites
+### 2a Examples
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
+_Notice how we use the bracket notation instead of the dot-notation for the last 2 properties of the cast object, it's because the decoupled values are not valid JavaScript identifiers (for example, a property name that has a space or a hyphen, or that starts with a number)._
+
+  ```js
+  const spells = {
+    basic: "fire",
+    special: "high voltage",
+    ultimate: "💧",
+  }
+
+  const cast = {
+    [spells.basic]: "🔥",
+    [spells.special]: "⚡",
+    [spells.ultimate]: "🌊",
+  }
+
+  console.log(cast.fire);            // 🔥
+  console.log(cast["high voltage"]); // ⚡
+  console.log(cast["💧"]);           // 🌊
   ```
 
-### Installation
+### 2b Practical Uses
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Below is a basic example of how we could use this feature when working with React's useReducer hook._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+  ```js
+  const initialState = {
+    username: "",
+    password: "",
+  }
+  
+  export default function LoginForm() {
+    const [state, dispatch] = useReducer((state, action) => {
+      switch (action.type) {
+        case "TEXT_FIELD":
+          // Decoupling fieldType property from dispatch
+          return { ...state, [action.fieldType]: action.payload }; 
+        default:
+          return state;
+      }
+    }, initialState);
+    
+    const { username, password } = state;
+    
+    return (
+      <div className="App">
+        <form className="form">
+          <p>Please Login!</p>
+          <input 
+            type="text" 
+            value={username} 
+            onChange={(e) => 
+              dispatch({ 
+                type: "TEXT_FIELD", 
+                fieldType: "username", 
+                payload: e.currentTarget.value, 
+              })
+            }
+          />
+          <input 
+            type="password" 
+            value={password} 
+            onChange={(e) => 
+              dispatch({ 
+                type: "TEXT_FIELD", 
+                fieldType: "password", 
+                payload: e.currentTarget.value, 
+              })
+            }
+          />
+        </form>
+      </div>
+    );
+  }
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
-## License
+<!-- IMMEDIATELY INVOKED FUNCTION EXPRESSION -->
+## Immediately Invoked Function Expression 
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+We can create and call a function expression at the same time.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### 3a Examples
 
+_Notice the different ways we can create an IIFE. For an IIFE to work, we first needed to change the context of the function keyword to be an expression either by enclosing it inside parentheses or using operators. Note that the ! operator will negate the returned boolean value of the IIFE and if the expression doesn't return anything, it would just result to true, while the + operator will try to add the returned value but since it would always have no value on the left-hand side of the operator, no further actions would be executed._
 
+  ```js
+  var functionEx;
+  (functionEx = function() {
+    console.log("✔️")
+  })(); // ✔️
 
-<!-- CONTACT -->
-## Contact
+  (function() {
+    console.log("✔️")
+  })(); // ✔️
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+  !function() {
+    console.log("✔️")
+  }(); // ✔️
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+  +function() {
+    console.log("✔️")
+  }(); // ✔️
+  ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### 3b Practical Uses
 
+_If your code doesn't support ES6, you can't use the new let and const keywords for creating block-scoped local variables. You'll have to resort to classic function scoping offered by IIFEs._
 
+  ```js
+  {
+    let part = "🦾";
+    console.log(part); // 🦾
+  }
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+  part; // ReferenceError: part is not defined
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+  (function() {
+    var part = "🦾";
+    console.log(part);
+  })(); // 🦾
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+  part; // ReferenceError: part is not defined
+  ```
+
+_IIFEs can also be used to manage private data by returning functions that create closures for the local variables._
+
+  ```js
+  const robot = (function() {
+    let part = "⚙️";
+    return {
+      getPart: () => part,
+      setPart: (newPart) => part = newPart
+    };
+  })();
+
+  console.log(robot.getPart()); // ⚙️
+  robot.setPart("🤖");
+  console.log(robot.getPart()); // 🤖
+  ```
+
+_Let's say you're using jQuery and another library that also assigns to the $ global variable, we can resolve this naming conflict by wrapping the other piece of code with an IIFE that uses $ as a parameter name. We can also do a similar thing if we wanted to capture the global object no matter where we run our code. For example, the global object in the browser is window while Node.js uses global. Aliasing variable names can also be used to optimize code such that it can be minified more efficiently where a JavaScript minifier like UglifyJS can shorten the function's parameter names to single-letter identifiers._
+
+  ```js
+  window.$ = function somethingElse() {
+    // ...
+  };
+
+  (function($) {
+    // ...
+  })(jQuery);
+  
+  (function(global) {
+    // ...
+  })(this);
+  
+  (function(window, document, undefined) {
+    // ...
+  })(window, document);
+
+  (function(w, d, u) {
+    // ...
+  })(window, document);
+  ```
+
+_Not having the let keyword of ES6 can also cause unexpected results when running asynchronous tasks inside a loop as the value for i would immediately be changed until the loop condition wasn't fulfilled anymore, we can use IIFEs again for this case._
+
+  ```js
+  for (var i = 0; i < 3; i++) {
+    setTimeout(() => console.log(`Current index: ${i}`), 100);
+    // Current index: 3
+    // Current index: 3
+    // Current index: 3
+  }
+
+  for (var i = 0; i < 3; i++) {
+    (function(index) {
+      setTimeout(() => console.log(`Current index: ${index}`), 100);
+    })(i);
+    // Current index: 0
+    // Current index: 1
+    // Current index: 2
+  }
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -238,32 +297,10 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[github-shield]: https://img.shields.io/github/followers/ColstonBod-oy?style=social
+[github-url]: https://github.com/ColstonBod-oy
+[twitter-shield]: https://img.shields.io/twitter/follow/OyColston?style=social
+[twitter-url]: https://twitter.com/OyColston
+[reddit-shield]: https://img.shields.io/reddit/user-karma/combined/Coldz-Stone?style=social
+[reddit-url]: https://www.reddit.com/user/Coldz-Stone
+[java-logo]: images/java-logo.png
