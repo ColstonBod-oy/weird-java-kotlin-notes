@@ -33,7 +33,7 @@
   <h3 align="center">Functional Java Snippets</h3>
 
   <p align="center">
-    My lifelong snippets about the functional interfaces 🤖⚙️ and stream API 🧵 features of Java 8 onwards!
+    My lifelong snippets about the functional interfaces 🤖⚙️ and Stream API 🧵 features of Java 8 onwards!
     <br />
     <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>
     <br />
@@ -66,10 +66,10 @@
       </ul>
     </li>
     <li>
-      <a href="#immediately-invoked-function-expression">Immediately Invoked Function Expression</a>
+      <a href="#sort-a-string-of-characters">Sort A String Of Characters</a>
       <ul>
-        <li><a href="#3a-examples">Examples</a></li>
-        <li><a href="#3b-practical-uses">Practical Uses</a></li>
+        <li><a href="#3a-snippets">Snippets</a></li>
+        <li><a href="#3b-explanation">Explanation</a></li>
       </ul>
     </li>
   </ol>
@@ -84,7 +84,7 @@
 
 Hello! my name is Colston D. Bod-oy, I'm a React developer and would be taking my 3rd year of college on the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
   
-I created this project so I could keep track and recall snippets about Java's functional interfaces and stream API as I've just recently started learning it, hope you'll find these notes useful! 😎.
+I created this project so I could keep track and recall snippets about Java's functional interfaces and Stream API as I've just recently started learning it, hope you'll find these notes useful! 😎.
 
 
 ### README Template
@@ -143,172 +143,28 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
   }
   ```
 
-### 2b Practical Uses
+### 2b Explanation
 
-_Below is a basic example of how we could use this feature when working with React's useReducer hook._
-
-  ```js
-  const initialState = {
-    username: "",
-    password: "",
-  }
+We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` to map a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified Integer object as an int primitive data type.  
   
-  export default function LoginForm() {
-    const [state, dispatch] = useReducer((state, action) => {
-      switch (action.type) {
-        case "TEXT_FIELD":
-          // Decoupling fieldType property from dispatch
-          return { ...state, [action.fieldType]: action.payload }; 
-        default:
-          return state;
-      }
-    }, initialState);
-    
-    const { username, password } = state;
-    
-    return (
-      <div className="App">
-        <form className="form">
-          <p>Please Login!</p>
-          <input 
-            type="text" 
-            value={username} 
-            onChange={(e) => 
-              dispatch({ 
-                type: "TEXT_FIELD", 
-                fieldType: "username", 
-                payload: e.currentTarget.value, 
-              })
-            }
-          />
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => 
-              dispatch({ 
-                type: "TEXT_FIELD", 
-                fieldType: "password", 
-                payload: e.currentTarget.value, 
-              })
-            }
-          />
-        </form>
-      </div>
-    );
-  }
-  ```
+We also used ```Integer.parseInt()``` on the last example to return an int from a given string representation. At the end of our examples, we used the ```toArray()``` method which returns an array of all the elements of the ```IntStream```.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- IMMEDIATELY INVOKED FUNCTION EXPRESSION -->
-## Immediately Invoked Function Expression 
+<!-- SORT A STRING OF CHARACTERS -->
+## Sort A String Of Characters 
 
-We can create and call a function expression at the same time.
 
-### 3a Examples
 
-_Notice the different ways we can create an IIFE. For an IIFE to work, we first needed to change the context of the function keyword to be an expression either by enclosing it inside parentheses or using operators. Note that the ! operator will negate the returned boolean value of the IIFE and if the expression doesn't return anything, it would just result to true, while the + operator will try to add the returned value but since it would always have no value on the left-hand side of the operator, no further actions would be executed._
+### 3a Snippets
 
-  ```js
-  var functionEx;
-  (functionEx = function() {
-    console.log("✔️")
-  })(); // ✔️
 
-  (function() {
-    console.log("✔️")
-  })(); // ✔️
 
-  !function() {
-    console.log("✔️")
-  }(); // ✔️
+### 3b Explanation
 
-  +function() {
-    console.log("✔️")
-  }(); // ✔️
-  ```
 
-### 3b Practical Uses
-
-_If your code doesn't support ES6, you can't use the new let and const keywords for creating block-scoped local variables. You'll have to resort to classic function scoping offered by IIFEs._
-
-  ```js
-  {
-    let part = "🦾";
-    console.log(part); // 🦾
-  }
-
-  part; // ReferenceError: part is not defined
-
-  (function() {
-    var part = "🦾";
-    console.log(part);
-  })(); // 🦾
-
-  part; // ReferenceError: part is not defined
-  ```
-
-_IIFEs can also be used to manage private data by returning functions that create closures for the local variables._
-
-  ```js
-  const robot = (function() {
-    let part = "⚙️";
-    return {
-      getPart: () => part,
-      setPart: (newPart) => part = newPart
-    };
-  })();
-
-  console.log(robot.getPart()); // ⚙️
-  robot.setPart("🤖");
-  console.log(robot.getPart()); // 🤖
-  ```
-
-_Let's say you're using jQuery and another library that also assigns to the $ global variable, we can resolve this naming conflict by wrapping the other piece of code with an IIFE that uses $ as a parameter name. We can also do a similar thing if we wanted to capture the global object no matter where we run our code. For example, the global object in the browser is window while Node.js uses global. Aliasing variable names can also be used to optimize code such that it can be minified more efficiently where a JavaScript minifier like UglifyJS can shorten the function's parameter names to single-letter identifiers._
-
-  ```js
-  window.$ = function somethingElse() {
-    // ...
-  };
-
-  (function($) {
-    // ...
-  })(jQuery);
-  
-  (function(global) {
-    // ...
-  })(this);
-  
-  (function(window, document, undefined) {
-    // ...
-  })(window, document);
-
-  (function(w, d, u) {
-    // ...
-  })(window, document);
-  ```
-
-_Not having the let keyword of ES6 can also cause unexpected results when running asynchronous tasks inside a loop as the value for i would immediately be changed until the loop condition wasn't fulfilled anymore, we can use IIFEs again for this case._
-
-  ```js
-  for (var i = 0; i < 3; i++) {
-    setTimeout(() => console.log(`Current index: ${i}`), 100);
-    // Current index: 3
-    // Current index: 3
-    // Current index: 3
-  }
-
-  for (var i = 0; i < 3; i++) {
-    (function(index) {
-      setTimeout(() => console.log(`Current index: ${index}`), 100);
-    })(i);
-    // Current index: 0
-    // Current index: 1
-    // Current index: 2
-  }
-  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
