@@ -137,8 +137,8 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
       System.out.println(Arrays.toString(integersMap.keySet().stream().mapToInt(Integer::intValue).toArray()));  
       // [16087526, 64992058, 61656601, 77778805, 44708273]
       
-      System.out.println(Arrays.toString(strNumsMap.keySet().stream().mapToInt(Integer::parseInt).toArray())); 
-      // [61656601, 44708273, 77778805, 64992058, 16087526]
+      System.out.println(Arrays.toString(Arrays.copyOfRange(strNumsMap.keySet().stream().mapToInt(Integer::parseInt).toArray(), 0, 3)));  
+      // [61656601, 44708273, 77778805]
     }
   }
   ```
@@ -147,7 +147,7 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
 
 We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` to map a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified Integer object as an int primitive data type.  
   
-We also used ```Integer.parseInt()``` on the last example to return an int from a given string representation. At the end of our examples, we used the ```toArray()``` method which returns an array of all the elements of the ```IntStream```.
+We also used ```Integer.parseInt()``` on the last example to return an int from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
