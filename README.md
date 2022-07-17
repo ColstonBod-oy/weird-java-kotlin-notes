@@ -59,7 +59,7 @@
       </ul>
     </li>
     <li>
-      <a href="#get-an-array-of-map's-keys">Get an Array of Map's Keys</a>
+      <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
       <ul>
         <li><a href="#2a-snippets">Snippets</a></li>
         <li><a href="#2b-explanation">Explanation</a></li>
@@ -97,8 +97,8 @@ Here's where I got this template btw, also don't forget to follow me on my socia
 
 
 
-<!-- GET AN ARRAY OF MAP'S KEYS -->
-## Get an Array of Map's Keys 
+<!-- GET AN ARRAY OF MAPS KEYS -->
+## Get An Array Of Map's Keys 
 
 This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
