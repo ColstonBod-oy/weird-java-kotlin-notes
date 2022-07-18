@@ -66,7 +66,7 @@
       </ul>
     </li>
     <li>
-      <a href="#sort-a-string-of-characters">Sort A String Of Characters</a>
+      <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
       <ul>
         <li><a href="#3a-snippets">Snippets</a></li>
         <li><a href="#3b-explanation">Explanation</a></li>
@@ -153,14 +153,40 @@ We also used ```Integer.parseInt()``` on the last example to return an int from 
 
 
 
-<!-- SORT A STRING OF CHARACTERS -->
-## Sort A String Of Characters 
+<!-- SWAP KEYS AND VALUES IN A MAP -->
+## Swap Keys And Values In A Map 
 
-
+This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
 ### 3a Snippets
 
+  ```java
+  import java.util.Map;
+  import java.util.List;
+  import java.util.HashMap;
+  import java.util.TreeMap;
+  import java.util.stream.Collectors;
 
+  class Main {
+    public static void main(String[] args) {
+      HashMap<String, Integer> cityMap = new HashMap<>();
+      cityMap.put("New York", 20220928);
+      cityMap.put("Chicago", 20220812);
+      cityMap.put("Boston", 20220928);
+      cityMap.put("Los Angeles", 20220928);
+      cityMap.put("Seattle", 20221103);
+    
+      Map<Integer, List<String>> dateMap = cityMap.entrySet().stream().collect(Collectors.groupingBy(Map.Entry::getValue, Collectors.mapping(Map.Entry::getKey, Collectors.toList()))); 
+      TreeMap<Integer, List<String>> sortedDateMap = cityMap.entrySet().stream().collect(Collectors.groupingBy(Map.Entry::getValue, TreeMap::new, Collectors.mapping(Map.Entry::getKey, Collectors.toList())));
+    
+      System.out.println(dateMap);
+      // {20220928=[New York, Los Angeles, Boston], 20220812=[Chicago], 20221103=[Seattle]}
+    
+      System.out.println(sortedDateMap);
+      // {20220812=[Chicago], 20220928=[New York, Los Angeles, Boston], 20221103=[Seattle]}
+    }
+  }
+  ```
 
 ### 3b Explanation
 
