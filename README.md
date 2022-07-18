@@ -134,10 +134,13 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
       System.out.println(Arrays.toString(stringsMap.keySet().stream().toArray()));  
       // [!V$q, b#Oo, lW@$, W*Ru, V*tx]
       
-      System.out.println(Arrays.toString(integersMap.keySet().stream().mapToInt(Integer::intValue).toArray()));  
+      System.out.println(Arrays.toString(integersMap.keySet().stream()  
+        .mapToInt(Integer::intValue).toArray()));  
       // [16087526, 64992058, 61656601, 77778805, 44708273]
       
-      System.out.println(Arrays.toString(Arrays.copyOfRange(strNumsMap.keySet().stream().mapToInt(Integer::parseInt).toArray(), 0, 3)));  
+      System.out.println(Arrays.toString(Arrays
+        .copyOfRange(strNumsMap.keySet().stream()
+        .mapToInt(Integer::parseInt).toArray(), 0, 3)));  
       // [61656601, 44708273, 77778805]
     }
   }
@@ -176,8 +179,14 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
       cityMap.put("Los Angeles", 20220928);
       cityMap.put("Seattle", 20221103);
     
-      Map<Integer, List<String>> dateMap = cityMap.entrySet().stream().collect(Collectors.groupingBy(Map.Entry::getValue, Collectors.mapping(Map.Entry::getKey, Collectors.toList()))); 
-      TreeMap<Integer, List<String>> sortedDateMap = cityMap.entrySet().stream().collect(Collectors.groupingBy(Map.Entry::getValue, TreeMap::new, Collectors.mapping(Map.Entry::getKey, Collectors.toList())));
+      Map<Integer, List<String>> dateMap = cityMap  
+        .entrySet().stream().collect(Collectors  
+        .groupingBy(Map.Entry::getValue, Collectors  
+        .mapping(Map.Entry::getKey, Collectors.toList()))); 
+      TreeMap<Integer, List<String>> sortedDateMap = cityMap  
+        .entrySet().stream().collect(Collectors  
+        .groupingBy(Map.Entry::getValue, TreeMap::new, Collectors  
+        .mapping(Map.Entry::getKey, Collectors.toList())));
     
       System.out.println(dateMap);
       // {20220928=[New York, Los Angeles, Boston], 20220812=[Chicago], 20221103=[Seattle]}
