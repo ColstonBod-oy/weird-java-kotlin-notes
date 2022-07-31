@@ -72,6 +72,13 @@
         <li><a href="#3b-explanation">Explanation</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#convert-array-of-primitives-to-hashset">Convert Array Of Primitives To HashSet</a>
+      <ul>
+        <li><a href="#4a-snippets">Snippets</a></li>
+        <li><a href="#4b-explanation">Explanation</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -209,6 +216,42 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
+<!-- CONVERT ARRAY OF PRIMITIVES TO HASHSET -->
+## Convert Array Of Primitives To HashSet
+
+The info I used for this snippet can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
+
+### 4a Snippets
+
+  ```java
+  import java.util.List;
+  import java.util.Arrays;
+  import java.util.HashSet;
+  import java.util.stream.Collectors;
+
+  class Main {
+    public static void main(String[] args) {
+      int[] nums = {1, 2, 3, 4, 5};
+      HashSet<Integer> set = new HashSet<>(Arrays.stream(nums).boxed().collect(Collectors.toSet()));
+      List<Integer> list = Arrays.stream(nums).boxed().collect(Collectors.toList());
+        
+      System.out.println(set);
+      // [1, 2, 3, 4, 5]
+        
+      System.out.println(list);
+      // [1, 2, 3, 4, 5]
+    }
+  }
+  ```
+  
+### 4b Explanation
+
+The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
