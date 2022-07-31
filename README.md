@@ -73,7 +73,7 @@
       </ul>
     </li>
     <li>
-      <a href="#convert-array-of-primitives-to-hashset">Convert Array Of Primitives To HashSet</a>
+      <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
       <ul>
         <li><a href="#4a-snippets">Snippets</a></li>
         <li><a href="#4b-explanation">Explanation</a></li>
@@ -218,8 +218,8 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 
 
 
-<!-- CONVERT ARRAY OF PRIMITIVES TO HASHSET -->
-## Convert Array Of Primitives To HashSet
+<!-- CONVERT ARRAY OF PRIMITIVES TO A LIST OR SET -->
+## Convert Array Of Primitives To A List Or Set
 
 The info I used for this snippet can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
