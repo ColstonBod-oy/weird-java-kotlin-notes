@@ -30,10 +30,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Functional Java Snippets</h3>
+  <h3 align="center">Weird Java Notes</h3>
 
   <p align="center">
-    My lifelong snippets about the functional interfaces 🤖⚙️ and Stream API 🧵 features of Java 8 onwards!
+    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of JavaScript!
     <br />
     <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,22 +61,22 @@
     <li>
       <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
       <ul>
-        <li><a href="#2a-snippets">Snippets</a></li>
-        <li><a href="#2b-explanation">Explanation</a></li>
+        <li><a href="#2a-snippets">Examples</a></li>
+        <li><a href="#2b-explanation">Description</a></li>
       </ul>
     </li>
     <li>
       <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
       <ul>
-        <li><a href="#3a-snippets">Snippets</a></li>
-        <li><a href="#3b-explanation">Explanation</a></li>
+        <li><a href="#3a-snippets">Examples</a></li>
+        <li><a href="#3b-explanation">Description</a></li>
       </ul>
     </li>
     <li>
       <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
       <ul>
-        <li><a href="#4a-snippets">Snippets</a></li>
-        <li><a href="#4b-explanation">Explanation</a></li>
+        <li><a href="#4a-snippets">Examples</a></li>
+        <li><a href="#4b-explanation">Description</a></li>
       </ul>
     </li>
   </ol>
@@ -109,7 +109,7 @@ Here's where I got this template btw, also don't forget to follow me on my socia
 
 This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
-### 2a Snippets
+### 2a Examples
 
   ```java
   import java.util.Arrays;
@@ -153,7 +153,7 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
   }
   ```
 
-### 2b Explanation
+### 2b Description
 
 We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified Integer object as an int primitive data type.  
   
@@ -168,7 +168,7 @@ We also used ```Integer.parseInt()``` on the last example to return an int from 
 
 This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
-### 3a Snippets
+### 3a Examples
 
   ```java
   import java.util.Map;
@@ -204,7 +204,7 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
   }
   ```
 
-### 3b Explanation
+### 3b Description
 
 First, the set view of the mappings was obtained to create a new stream then we apply the ```Stream.collect()``` method which performs a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
@@ -223,7 +223,7 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 
 The info I used for this snippet can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
-### 4a Snippets
+### 4a Examples
 
   ```java
   import java.util.List;
@@ -246,7 +246,7 @@ The info I used for this snippet can be found on [HowToDoInJava](https://howtodo
   }
   ```
   
-### 4b Explanation
+### 4b Description
 
 The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
