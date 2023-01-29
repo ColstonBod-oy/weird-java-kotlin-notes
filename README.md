@@ -33,7 +33,7 @@
   <h3 align="center">Weird Java Notes</h3>
 
   <p align="center">
-    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of JavaScript!
+    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of Java!
     <br />
     <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>
     <br />
