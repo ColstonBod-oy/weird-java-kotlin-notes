@@ -91,7 +91,7 @@
 
 Hello! my name is Colston D. Bod-oy, I'm a React developer and would be taking my 3rd year of college on the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
   
-I created this project so I could keep track and recall snippets about Java's functional interfaces and Stream API as I've just recently started learning them, hope you'll find these notes useful! 😎.
+I created this project so I could keep track of and recall things that I didn't know I could do in Java as I've just recently started learning it, hope you'll find these notes useful! 😎.
 
 
 ### README Template
