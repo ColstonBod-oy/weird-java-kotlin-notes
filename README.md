@@ -54,30 +54,42 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#readme-template">README Template</a></li>
-      </ul>
+      <details>
+        <summary>1a</summary>
+        <ul>
+          <li><a href="#readme-template">README Template</a></li>
+        </ul>
+      </details>
     </li>
     <li>
       <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
-      <ul>
-        <li><a href="#2a-examples">Examples</a></li>
-        <li><a href="#2b-description">Description</a></li>
-      </ul>
+      <details>
+        <summary>2a</summary>
+        <ul>
+          <li><a href="#2a-examples">2a Examples</a></li>
+          <li><a href="#2a-description">2a Description</a></li>
+        </ul>
+      </details>
     </li>
     <li>
       <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
-      <ul>
-        <li><a href="#3a-examples">Examples</a></li>
-        <li><a href="#3b-description">Description</a></li>
-      </ul>
+      <details>
+        <summary>3a</summary>
+        <ul>
+          <li><a href="#3a-examples">3a Examples</a></li>
+          <li><a href="#3a-description">3a Description</a></li>
+        </ul>
+      </details>
     </li>
     <li>
       <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
-      <ul>
-        <li><a href="#4a-examples">Examples</a></li>
-        <li><a href="#4b-description">Description</a></li>
-      </ul>
+      <details>
+        <summary>4a</summary>
+        <ul>
+          <li><a href="#4a-examples">4a Examples</a></li>
+          <li><a href="#4a-description">4a Description</a></li>
+        </ul>
+      </details>
     </li>
   </ol>
 </details>
