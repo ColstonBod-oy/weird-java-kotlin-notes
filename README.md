@@ -91,6 +91,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#compare-wrapper-types">Compare Wrapper Types</a>
+      <details>
+        <summary>5a</summary>
+        <ul>
+          <li><a href="#5a-examples">5a Examples</a></li>
+          <li><a href="#5a-description">5a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -119,7 +129,7 @@ Here's where I got this template btw, also don't forget to follow me on my socia
 <!-- GET AN ARRAY OF MAPS KEYS -->
 ## Get An Array Of Map's Keys 
 
-This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
+I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
 ### 2a Examples
 
@@ -178,7 +188,7 @@ We also used ```Integer.parseInt()``` on the last example to return an int from 
 <!-- SWAP KEYS AND VALUES IN A MAP -->
 ## Swap Keys And Values In A Map 
 
-This is a snippet I found on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
+I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
 ### 3a Examples
 
@@ -233,7 +243,7 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 <!-- CONVERT ARRAY OF PRIMITIVES TO A LIST OR SET -->
 ## Convert Array Of Primitives To A List Or Set
 
-The info I used for this snippet can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
+The info I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
 ### 4a Examples
 
@@ -264,6 +274,41 @@ The array was first converted to a stream and since it's a stream of primitives 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
   
+
+
+<!-- COMPARE WRAPPER TYPES -->
+## Compare Wrapper Types
+
+The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal) which shows why the ```Integer``` objects are not equal.
+
+### 5a Examples
+
+  ```java
+  import java.util.HashMap;
+
+  class Main {
+    public static void main(String[] args) {
+      HashMap<Character, Integer> map1 = new HashMap<>();
+      HashMap<Character, Integer> map2 = new HashMap<>();
+        
+      map1.put('N', 127);
+      map2.put('N', 127);
+      System.out.println(map1.get('N') == map2.get('N')); // true
+        
+      map1.put('N', 128);
+      map2.put('N', 128);
+      System.out.println(map1.get('N') == map2.get('N')); // false
+      System.out.println(map1.get('N').equals(map2.get('N'))); // true
+    }
+  }
+  ```
+  
+### 5a Description
+
+When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean``` using ```==``` or ```!=```, you're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo(Object other)```, or ```equals(Object other)``` when making comparisons.   
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
