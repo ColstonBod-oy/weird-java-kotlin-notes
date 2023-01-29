@@ -61,22 +61,22 @@
     <li>
       <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
       <ul>
-        <li><a href="#2a-snippets">Examples</a></li>
-        <li><a href="#2b-explanation">Description</a></li>
+        <li><a href="#2a-examples">Examples</a></li>
+        <li><a href="#2b-description">Description</a></li>
       </ul>
     </li>
     <li>
       <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
       <ul>
-        <li><a href="#3a-snippets">Examples</a></li>
-        <li><a href="#3b-explanation">Description</a></li>
+        <li><a href="#3a-examples">Examples</a></li>
+        <li><a href="#3b-description">Description</a></li>
       </ul>
     </li>
     <li>
       <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
       <ul>
-        <li><a href="#4a-snippets">Examples</a></li>
-        <li><a href="#4b-explanation">Description</a></li>
+        <li><a href="#4a-examples">Examples</a></li>
+        <li><a href="#4b-description">Description</a></li>
       </ul>
     </li>
   </ol>
