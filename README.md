@@ -165,7 +165,7 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
   }
   ```
 
-### 2b Description
+### 2a Description
 
 We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified Integer object as an int primitive data type.  
   
@@ -216,7 +216,7 @@ This is a snippet I found on [Stack Overflow](https://stackoverflow.com/question
   }
   ```
 
-### 3b Description
+### 3a Description
 
 First, the set view of the mappings was obtained to create a new stream then we apply the ```Stream.collect()``` method which performs a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
@@ -258,7 +258,7 @@ The info I used for this snippet can be found on [HowToDoInJava](https://howtodo
   }
   ```
   
-### 4b Description
+### 4a Description
 
 The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
