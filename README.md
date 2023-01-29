@@ -308,7 +308,7 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
   
 ### 5a Description
 
-When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, you're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
+When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
