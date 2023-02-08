@@ -101,6 +101,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#nest-methods">Nest Methods</a>
+      <details>
+        <summary>6a</summary>
+        <ul>
+          <li><a href="#6a-examples">6a Examples</a></li>
+          <li><a href="#6a-description">6a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -309,6 +319,53 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
 ### 5a Description
 
 When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- NEST METHODS -->
+## Nest Methods
+
+The info I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/) which shows the different ways we could nest methods in Java.
+
+### 6a Examples
+
+  ```java
+  class Main {
+    interface Build {
+      int factorial(int n);
+    }
+    
+    public static void buildStr() {
+      StringBuilder sb = new StringBuilder(5);
+      Build builder = new Build() {
+        @Override
+        public int factorial(int n) {
+          if (n == 0 || n == 1) {
+            return 1;
+          }
+                
+          return n * factorial(n - 1);
+        };
+      };
+        
+      for (int i = 0; i < 5; i++) {
+        sb.append(builder.factorial(i));
+      }    
+        
+      System.out.println(sb.toString());
+    }
+    
+    public static void main(String[] args) {
+      buildStr(); // 112624
+    }
+  }
+  ```
+  
+### 6a Description
+
+Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
