@@ -111,6 +111,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#map-two-arrays-to-a-hashmap">Map Two Arrays To A HashMap</a>
+      <details>
+        <summary>7a</summary>
+        <ul>
+          <li><a href="#7a-examples">7a Examples</a></li>
+          <li><a href="#7a-description">7a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -368,6 +378,51 @@ The info I used for these examples can be found on [GeeksforGeeks](https://www.g
 Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- MAP TWO ARRAYS TO A HASHMAP -->
+## Map Two Arrays To A HashMap
+
+The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order) which allows sorting of the map as well.
+
+### 7a Examples
+
+  ```java
+  import java.util.Map;
+  import java.util.TreeMap;
+  import java.util.LinkedHashMap;
+  import java.util.stream.IntStream;
+  import java.util.function.Supplier;
+  import static java.util.Comparator.reverseOrder;
+  import static java.util.stream.Collectors.toMap;
+
+  class Main {
+    public static void main(String[] args) {
+      int[] positions = {10, 8, 0, 5, 3};
+      int[] speeds = {2, 4, 1, 1, 3};
+      Map<Integer, Integer> velocities = IntStream.range(0, positions.length)
+        .boxed().collect(toMap(i -> positions[i], i -> speeds[i]));
+      Map<Integer, Integer> velocitiesOrdered = IntStream.range(0, positions.length)
+        .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
+        (i, j) -> i, LinkedHashMap::new));
+      Supplier<TreeMap<Integer, Integer>> mapSupplier = () -> 
+        new TreeMap<>(reverseOrder());
+      Map<Integer, Integer> velocitiesSorted = IntStream.range(0, positions.length)
+        .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
+        (i, j) -> i, mapSupplier));
+
+      System.out.println(velocities);
+      // {0=1, 3=3, 5=1, 8=4, 10=2}
+        
+      System.out.println(velocitiesOrdered);
+      // {10=2, 8=4, 0=1, 5=1, 3=3}
+        
+      System.out.println(velocitiesSorted);
+      // {10=2, 8=4, 5=1, 3=3, 0=1}
+    }
+  }
+  ```
 
 
 
