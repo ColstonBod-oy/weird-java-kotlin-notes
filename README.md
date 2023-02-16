@@ -197,9 +197,9 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
 
 ### 2a Description
 
-We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified Integer object as an int primitive data type.  
+We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
   
-We also used ```Integer.parseInt()``` on the last example to return an int from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
+We also used ```Integer.parseInt()``` on the last example to return an ```int``` from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -436,6 +436,16 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
     }
   }
   ```
+  
+### 7a Description
+
+To use the ```Collectors.toMap()``` method we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the LinkedHashMap::new function as the argument for the ```mapSupplier``` parameter which was shown in the second example.  
+  
+For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function as well for this example to maintain the sorted values when collecting them into a map.  
+  
+We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the positions array. Finally, we used the speeds array as the basis for the sorting of the fifth example.      
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
