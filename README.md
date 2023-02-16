@@ -439,9 +439,9 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   
 ### 7a Description
 
-To use the ```Collectors.toMap()``` method we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the LinkedHashMap::new function as the argument for the ```mapSupplier``` parameter which was shown in the second example.  
+To use the ```Collectors.toMap()``` method we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter which was shown in the second example.  
   
-For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function as well for this example to maintain the sorted values when collecting them into a map.  
+For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function as well for this example and the fifth example to maintain the sorted values when collecting them into a map.  
   
 We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the positions array. Finally, we used the speeds array as the basis for the sorting of the fifth example.      
 
