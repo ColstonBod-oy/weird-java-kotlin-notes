@@ -394,6 +394,7 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   import java.util.LinkedHashMap;
   import java.util.stream.IntStream;
   import java.util.function.Supplier;
+  import static java.util.Comparator.comparing;
   import static java.util.Comparator.reverseOrder;
   import static java.util.stream.Collectors.toMap;
 
@@ -406,20 +407,32 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
       Map<Integer, Integer> velocitiesOrdered = IntStream.range(0, positions.length)
         .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
         (i, j) -> i, LinkedHashMap::new));
+      Map<Integer, Integer> velocitiesSorted = IntStream.range(0, positions.length)
+        .boxed().sorted(comparing(i -> positions[i])).collect(toMap(
+        i -> positions[i], i -> speeds[i], (i, j) -> i, LinkedHashMap::new));
       Supplier<TreeMap<Integer, Integer>> mapSupplier = () -> 
         new TreeMap<>(reverseOrder());
-      Map<Integer, Integer> velocitiesSorted = IntStream.range(0, positions.length)
+      Map<Integer, Integer> velocitiesReverseSorted = IntStream.range(0, positions.length)
         .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
         (i, j) -> i, mapSupplier));
+      Map<Integer, Integer> velocitiesSpeedSorted = IntStream.range(0, positions.length)
+        .boxed().sorted(comparing(i -> speeds[i])).collect(toMap(
+        i -> positions[i], i -> speeds[i], (i, j) -> i, LinkedHashMap::new));
 
       System.out.println(velocities);
       // {0=1, 3=3, 5=1, 8=4, 10=2}
-        
+      
       System.out.println(velocitiesOrdered);
       // {10=2, 8=4, 0=1, 5=1, 3=3}
-        
+      
       System.out.println(velocitiesSorted);
+      // {0=1, 3=3, 5=1, 8=4, 10=2}
+    
+      System.out.println(velocitiesReverseSorted);
       // {10=2, 8=4, 5=1, 3=3, 0=1}
+    
+      System.out.println(velocitiesSpeedSorted);
+      // {0=1, 5=1, 10=2, 3=3, 8=4}
     }
   }
   ```
