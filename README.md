@@ -121,6 +121,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#store-key-value-pairs-in-an-arraylist">Store Key-Value Pairs In An ArrayList</a>
+      <details>
+        <summary>8a</summary>
+        <ul>
+          <li><a href="#8a-examples">8a Examples</a></li>
+          <li><a href="#8a-description">8a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -446,6 +456,88 @@ For the third example, we used the ```Comparator.comparing``` method to compare 
 We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the positions array. Finally, we used the speeds array as the basis for the sorting of the fifth example.      
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- STORE KEY-VALUE PAIRS IN AN ARRAYLIST -->
+## Store Key-Value Pairs In An ArrayList
+
+The info I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/) which shows how to implement a ```Pair``` class.
+
+### 8a Examples
+
+  ```java
+  import java.util.List;
+  import java.util.Arrays;
+  import java.util.HashMap;
+  import java.util.ArrayList;
+
+  class Main {
+    public static void main(String[] args) {
+      Main main = new Main();
+      Main.TimeMap map = main.new TimeMap();
+      map.set("Server1", "User1", 145);
+      map.set("Server1", "User2", 565);
+      map.set("Server1", "User3", 35);
+      map.set("Server1", "User4", 13);
+      map.set("Server1", "User5", 145);
+      map.set("Server2", "User1", 23);
+      map.set("Server2", "User2", 19);
+      map.set("Server2", "User3", 61);
+        
+      System.out.println(map.get("Server1"));
+      // [User1, 145] [User2, 565] [User3, 35] [User4, 13] [User5, 145]
+        
+      System.out.println(map.get("Server2"));
+      // [User1, 23] [User2, 19] [User3, 61]
+    }
+    
+    class TimeMap {
+      HashMap<String, List<Pair<String, Integer>>> map;
+    
+      public TimeMap() {
+        map = new HashMap<>();
+      }
+    
+      public void set(String key, String value, int timestamp) {
+        if (!map.containsKey(key)) {
+          map.put(key, new ArrayList<>());
+        }
+      
+        map.get(key).add(new Pair(value, timestamp));
+      }
+    
+      public String get(String key) {
+        String res = "";
+        List<Pair<String, Integer>> list = map.getOrDefault(key, new ArrayList<>(0)); 
+            
+        for (Pair<String, Integer> p : list) {
+          res += "[" + p.getKey() + ", " + p.getValue() + "] ";
+        }
+            
+        return res;
+      }
+    }
+    
+    class Pair<T, V> {
+      private final T key;
+      private final V value;
+
+      public Pair(T key, V value) {
+        this.key = key;
+        this.value = value;
+      }
+
+      public T getKey() {
+        return key;
+      }
+
+      public V getValue() {
+        return value;
+      }
+    }
+  }
+  ```
 
 
 
