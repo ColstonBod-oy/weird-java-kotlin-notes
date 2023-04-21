@@ -122,7 +122,7 @@
       </details>
     </li>
     <li>
-      <a href="#store-key-value-pairs-in-an-arraylist">Store Key-Value Pairs In An ArrayList</a>
+      <a href="#store-key-value-pairs-in-a-list">Store Key-Value Pairs In A List</a>
       <details>
         <summary>8a</summary>
         <ul>
@@ -459,8 +459,8 @@ We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as th
 
 
 
-<!-- STORE KEY-VALUE PAIRS IN AN ARRAYLIST -->
-## Store Key-Value Pairs In An ArrayList
+<!-- STORE KEY-VALUE PAIRS IN A LIST -->
+## Store Key-Value Pairs In A List
 
 The info I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/) which shows how to implement a ```Pair``` class.
 
@@ -538,6 +538,12 @@ The info I used for these examples can be found on [Techie Delight](https://www.
     }
   }
   ```
+  
+### 8a Description
+  
+Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key as shown in the examples.    
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
