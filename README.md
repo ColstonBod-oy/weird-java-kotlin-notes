@@ -660,8 +660,8 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   
 ### 9a Description
   
-The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.
-  
+The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.  
+  
 To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
