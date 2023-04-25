@@ -560,7 +560,7 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
 <!-- CREATE A NODE PRIORITY QUEUE WITH COMPARATOR -->
 ## Create A Node Priority Queue With Comparator
 
-The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) which shows how to implement the ```Comparable``` interface.
+The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see below) would cause an overflow when trying to get the difference of two arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2]shows how to implement the ```Comparable``` interface.
 
 ### 9a Examples
 
