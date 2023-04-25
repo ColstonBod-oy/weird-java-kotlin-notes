@@ -131,6 +131,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
+      <details>
+        <summary>9a</summary>
+        <ul>
+          <li><a href="#9a-examples">9a Examples</a></li>
+          <li><a href="#9a-description">9a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -544,6 +554,91 @@ The info I used for these examples can be found on [Techie Delight](https://www.
 Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key as shown in the examples.    
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CREATE A NODE PRIORITY QUEUE WITH COMPARATOR -->
+## Create A Node Priority Queue With Comparator
+
+The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) which shows how to implement the ```Comparable``` interface.
+
+### 9a Examples
+
+  ```java
+  import java.util.PriorityQueue;
+
+  class Main {
+    public static void main(String[] args) {
+      Main main = new Main();
+      
+      // List Node 1
+      Main.ListNode list1Tail = main.new ListNode(5);
+      Main.ListNode list1N = main.new ListNode(4, list1Tail);
+      Main.ListNode list1Head = main.new ListNode(1, list1N);
+      
+      // List Node 2
+      Main.ListNode list2Tail = main.new ListNode(4);
+      Main.ListNode list2N = main.new ListNode(3, list2Tail);
+      Main.ListNode list2Head = main.new ListNode(1, list2N);
+      
+      // List Node 3
+      Main.ListNode list3Tail = main.new ListNode(6);
+      Main.ListNode list3Head = main.new ListNode(2, list3Tail);
+      
+      ListNode[] lists = {list1Head, list2Head, list3Head};
+      ListNode mergedListsHead = mergeKLists(lists);
+      System.out.println(mergedListsHead.toString());
+    }
+    
+    public ListNode mergeKLists(ListNode[] lists) {
+      if (lists == null || lists.length == 0) {
+        return null;
+      }
+
+      PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+
+      for (ListNode n : lists) {
+        if (n != null) {
+          queue.offer(n);  
+        } 
+      }
+
+      ListNode dummy = new ListNode(0);
+      ListNode curr = dummy;
+    
+      while (!queue.isEmpty()) {
+        ListNode n = queue.poll();
+        curr.next = n;
+        curr = curr.next;
+
+        if (n.next != null) {
+          queue.offer(n.next);
+        }
+      }
+
+      return dummy.next;
+    }
+    
+    class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+
+      @Override
+      public String toString() {
+        String result = val + " -> ";
+      
+        if (next != null) {
+          result += next.toString();
+        }
+      
+        return result;
+      }
+    }
+  }
+  ```
 
 
 
