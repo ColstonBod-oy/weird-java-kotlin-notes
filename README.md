@@ -586,8 +586,10 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
       Main.ListNode list3Head = main.new ListNode(2, list3Tail);
       
       ListNode[] lists = {list1Head, list2Head, list3Head};
-      ListNode mergedListsHead = mergeKLists(lists);
+      ListNode mergedListsHead = main.mergeKLists(lists);
+  
       System.out.println(mergedListsHead.toString());
+      // 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 ->
     }
     
     public ListNode mergeKLists(ListNode[] lists) {
@@ -595,7 +597,8 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
         return null;
       }
 
-      PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+      // PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+      PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.compareTo(b));
 
       for (ListNode n : lists) {
         if (n != null) {
@@ -619,12 +622,27 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
       return dummy.next;
     }
     
-    class ListNode {
+    class ListNode implements Comparable<ListNode> {
       int val;
       ListNode next;
       ListNode() {}
       ListNode(int val) { this.val = val; }
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+      
+      @Override
+      public int compareTo(ListNode n) {
+        if (this.val < n.val) {
+          return -1;
+        }
+                             
+        else if (this.val > n.val) {
+          return 1;
+        }
+  
+        else {
+          return 0;
+        }
+      }
 
       @Override
       public String toString() {
