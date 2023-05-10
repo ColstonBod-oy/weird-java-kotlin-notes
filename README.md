@@ -134,6 +134,13 @@
     <li>
       <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
       <details>
+        <summary>9a</summary>
+        <ul>
+          <li><a href="#9a-examples">9a Examples</a></li>
+          <li><a href="#9a-description">9a Description</a></li>
+        </ul>
+      </details>
+      <details>
         <summary>9b</summary>
         <ul>
           <li><a href="#9b-examples">9b Examples</a></li>
@@ -664,7 +671,7 @@ The example above merges sorted list nodes together, where List Nodes 1 and 2 ha
   
 To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
 
-This method of creating a comparator for the ```PriorityQueue``` is preferred over 9a when the elements used are not comparable out of the box (e.g., custom classes).
+This method of creating a comparator for the ```PriorityQueue``` is preferred over 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
