@@ -566,8 +566,80 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
 
 <!-- CREATE A NODE PRIORITY QUEUE WITH COMPARATOR -->
 ## Create A Node Priority Queue With Comparator
+  
+The info I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java) which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/). 
 
-The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
+### 9a Examples
+  
+  ```java
+  import java.util.Arrays;
+  import java.util.PriorityQueue;
+
+  class Main {
+    public static void main(String[] args) {
+      Main main = new Main();
+      int[][] points = {{3, 3}, {5, -1}, {-2, 4}};
+        
+      System.out.println(Arrays.deepToString(main.kClosestMinHeap(points, 2)));
+      // [[3, 3], [-2, 4]]
+        
+      System.out.println(Arrays.deepToString(main.kClosestMaxHeap(points, 2)));
+      // [[-2, 4], [3, 3]]
+    }
+    
+    public int[][] kClosestMinHeap(int[][] points, int k) { 
+      PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> 
+        Double.compare(
+          Math.pow(a[0], 2) + Math.pow(a[1], 2),
+          Math.pow(b[0], 2) + Math.pow(b[1], 2)
+        )
+      );
+
+      for (int[] point : points) {
+        pq.offer(point);
+      }
+
+      int[][] res = new int[k][2]; 
+
+      for (int i = 0; i < k; i++) {
+        int[] cur = pq.poll();
+        res[i][0] = cur[0];
+        res[i][1] = cur[1];
+      }
+
+      return res;
+    }
+    
+    public int[][] kClosestMaxHeap(int[][] points, int k) { 
+      PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> 
+        Double.compare(
+          Math.pow(b[0], 2) + Math.pow(b[1], 2),
+          Math.pow(a[0], 2) + Math.pow(a[1], 2)
+        )
+      );
+
+      for (int[] point : points) {
+        pq.offer(point);
+
+        if (pq.size() > k) {
+          pq.poll();
+        }
+      }
+
+      int[][] res = new int[k][2]; 
+
+      for (int i = 0; i < k; i++) {
+        int[] cur = pq.poll();
+        res[i][0] = cur[0];
+        res[i][1] = cur[1];
+      }
+
+      return res;
+    }
+  }
+  ```
+
+The info I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
 ### 9b Examples
 
@@ -671,7 +743,7 @@ The example above merges sorted list nodes together, where List Nodes 1 and 2 ha
   
 To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
 
-This method of creating a comparator for the ```PriorityQueue``` is preferred over 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
+This method of creating a comparator for the ```PriorityQueue``` is preferred over the examples in 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
