@@ -648,8 +648,8 @@ Instead of creating a new ```Comparator``` object, we could just use Java 8's la
 We could save more space by using a max heap instead of a min heap, as shown in the second example; we were able to convert the comparator for the max heap by flipping the conditions where we have the second array in our lambda expression as the first argument in our ```Double.compare()``` method (note that we used ```Double``` instead of ```Integer``` because the ```Math.pow()``` method returns a ```double``` value).
         
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-        
+  
+  
         
 The info I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
