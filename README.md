@@ -639,6 +639,12 @@ The info I used for these first examples can be found on [GitHub](https://github
   }
   ```
 
+### 9a Description
+
+
+
+        
+        
 The info I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
 ### 9b Examples
