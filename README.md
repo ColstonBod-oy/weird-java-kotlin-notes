@@ -134,10 +134,10 @@
     <li>
       <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
       <details>
-        <summary>9a</summary>
+        <summary>9b</summary>
         <ul>
-          <li><a href="#9a-examples">9a Examples</a></li>
-          <li><a href="#9a-description">9a Description</a></li>
+          <li><a href="#9b-examples">9b Examples</a></li>
+          <li><a href="#9b-description">9b Description</a></li>
         </ul>
       </details>
     </li>
@@ -562,7 +562,7 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
 
 The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
-### 9a Examples
+### 9b Examples
 
   ```java
   import java.util.PriorityQueue;
@@ -658,11 +658,13 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   }
   ```
   
-### 9a Description
+### 9b Description
   
 The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.  
   
 To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
+
+This method of creating a comparator for the ```PriorityQueue``` is preferred over 9a when the elements used are not comparable out of the box (e.g., custom classes).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
