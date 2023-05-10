@@ -641,7 +641,13 @@ The info I used for these first examples can be found on [GitHub](https://github
 
 ### 9a Description
 
-
+The examples above return the k closest points to the origin of an X-Y plane (0, 0) from a given set of coordinates. To solve the problem, we'll use a heap binary tree data structure, which is implemented as the ```PriorityQueue``` in Java. We could then pass a ```Comparator``` when instantiating to give rules on how we would want to order the elements that would be stored inside the ```PriorityQueue```.
+        
+Instead of creating a new ```Comparator``` object, we could just use Java 8's lambda expression feature to declare how our comparisons would work. We also used the Euclidean formula to calculate the distance of the points from the origin (note that we didn't apply the square root to the formula because it wouldn't affect our desired results). In the first example, we created what's called a min heap because the points would be ordered in an ascending order based on the results of the formula. We then continuously popped the head of the ```PriorityQueue``` and assigned its values to the indexes of our ```res``` 2D array until we had enough k elements, which we would then finally return as our result.  
+        
+We could save more space by using a max heap instead of a min heap, as shown in the second example; we were able to convert the comparator for the max heap by flipping the conditions where we have the second array in our lambda expression as the first argument in our ```Double.compare()``` method (note that we used ```Double``` instead of ```Integer``` because the ```Math.pow()``` method returns a ```double``` value).
+        
+<p align="right">(<a href="#top">back to top</a>)</p>
 
         
         
