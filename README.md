@@ -148,6 +148,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#create-a-hashset-of-arrays">Create A HashSet Of Arrays</a>
+      <details>
+        <summary>10a</summary>
+        <ul>
+          <li><a href="#10a-examples">10a Examples</a></li>
+          <li><a href="#10a-description">10a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -756,6 +766,45 @@ The example above merges sorted list nodes together, where List Nodes 1 and 2 ha
 To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
 
 This method of creating a comparator for the ```PriorityQueue``` is preferred over the examples in 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
+  
+ 
+<!-- CREATE A HASHSET OF ARRAYS -->
+## Create A HashSet Of Arrays
+
+The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) which shows different ways on how to implement a ```HashSet``` containing arrays/collections as elements.
+
+### 10a Examples
+
+  ```java
+  import java.util.List;
+  import java.util.HashSet;
+  
+  class Main {
+    public static void main(String[] args) {
+      int x = 0;
+      int y = 1;
+      int[] arr1 = {x, y};
+      int[] arr2 = {x, y};
+      List<Integer> list1 = List.of(x, y);
+      List<Integer> list2 = List.of(x, y);
+      HashSet<int[]> set1 = new HashSet<>();
+      HashSet<List<Integer>> set2 = new HashSet<>();
+        
+      set1.add(arr1);
+      System.out.println(set1.contains(arr2)); // false
+        
+      set2.add(list1);
+      System.out.println(set2.contains(list2)); // true
+    }
+  }
+  ```
+  
+### 10a Description
+  
+In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>``` values. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
