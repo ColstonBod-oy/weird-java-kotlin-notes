@@ -804,7 +804,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   
 ### 10a Description
   
-In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents.
+In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since its storing ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation which uses a custom class).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
