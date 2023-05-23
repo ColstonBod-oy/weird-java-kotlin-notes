@@ -774,7 +774,7 @@ This method of creating a comparator for the ```PriorityQueue``` is preferred ov
 <!-- CREATE A HASHSET OF ARRAYS -->
 ## Create A HashSet Of Arrays
 
-The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) which shows different ways on how to implement a ```HashSet``` containing arrays/collections as elements.
+The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) which shows different ways on how to implement a ```HashSet``` containing arrays/collections as elements.
 
 ### 10a Examples
 
@@ -804,7 +804,7 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
   
 ### 10a Description
   
-In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>``` values. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents.
+In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
