@@ -195,40 +195,44 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
   import java.util.HashMap;
 
   class Main {
-    public static void main(String[] args) {
-      HashMap<String, Integer> stringsMap = new HashMap<>();
-      stringsMap.put("!V$q", 16087526);
-      stringsMap.put("lW@$", 64992058);
-      stringsMap.put("V*tx", 61656601);
-      stringsMap.put("W*Ru", 77778805);
-      stringsMap.put("b#Oo", 44708273);
+      public static void main(String[] args) {
+          HashMap<String, Integer> stringsMap = new HashMap<>();
+          stringsMap.put("!V$q", 16087526);
+          stringsMap.put("lW@$", 64992058);
+          stringsMap.put("V*tx", 61656601);
+          stringsMap.put("W*Ru", 77778805);
+          stringsMap.put("b#Oo", 44708273);
     
-      HashMap<Integer, String> integersMap = new HashMap<>();
-      integersMap.put(16087526, "!V$q");
-      integersMap.put(64992058, "lW@$");
-      integersMap.put(61656601, "V*tx");
-      integersMap.put(77778805, "W*Ru");
-      integersMap.put(44708273, "b#Oo");
+          HashMap<Integer, String> integersMap = new HashMap<>();
+          integersMap.put(16087526, "!V$q");
+          integersMap.put(64992058, "lW@$");
+          integersMap.put(61656601, "V*tx");
+          integersMap.put(77778805, "W*Ru");
+          integersMap.put(44708273, "b#Oo");
     
-      HashMap<String, String> strNumsMap = new HashMap<>();
-      strNumsMap.put("16087526", "!V$q");
-      strNumsMap.put("64992058", "lW@$");
-      strNumsMap.put("61656601", "V*tx");
-      strNumsMap.put("77778805", "W*Ru");
-      strNumsMap.put("44708273", "b#Oo");
-    
-      System.out.println(Arrays.toString(stringsMap.keySet().stream().toArray()));  
-      // [!V$q, b#Oo, lW@$, W*Ru, V*tx]
+          HashMap<String, String> strNumsMap = new HashMap<>();
+          strNumsMap.put("16087526", "!V$q");
+          strNumsMap.put("64992058", "lW@$");
+          strNumsMap.put("61656601", "V*tx");
+          strNumsMap.put("77778805", "W*Ru");
+          strNumsMap.put("44708273", "b#Oo");
+          
+          // Output: [!V$q, b#Oo, lW@$, W*Ru, V*tx]
+          System.out.println(Arrays.toString(stringsMap      
+                  .keySet().stream().toArray()));  
+          
+          // Output: [16087526, 64992058, 61656601, 77778805, 44708273]
+          System.out.println(Arrays.toString(integersMap
+                  .keySet().stream().mapToInt(Integer
+                  ::intValue).toArray()));  
+          
+          // Output: [61656601, 44708273, 77778805]
+          System.out.println(Arrays.toString(Arrays
+                  .copyOfRange(strNumsMap.keySet().stream()
+                  .mapToInt(Integer::parseInt).toArray(), 
+                            0, 3)));  
       
-      System.out.println(Arrays.toString(integersMap.keySet().stream()  
-        .mapToInt(Integer::intValue).toArray()));  
-      // [16087526, 64992058, 61656601, 77778805, 44708273]
-      
-      System.out.println(Arrays.toString(Arrays
-        .copyOfRange(strNumsMap.keySet().stream()
-        .mapToInt(Integer::parseInt).toArray(), 0, 3)));  
-      // [61656601, 44708273, 77778805]
-    }
+      }
   }
   ```
 
@@ -257,29 +261,40 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4
   import java.util.stream.Collectors;
 
   class Main {
-    public static void main(String[] args) {
-      HashMap<String, Integer> cityMap = new HashMap<>();
-      cityMap.put("New York", 20220928);
-      cityMap.put("Chicago", 20220812);
-      cityMap.put("Boston", 20220928);
-      cityMap.put("Los Angeles", 20220928);
-      cityMap.put("Seattle", 20221103);
+      public static void main(String[] args) {
+          HashMap<String, Integer> cityMap = new HashMap<>();
+          cityMap.put("New York", 20220928);
+          cityMap.put("Chicago", 20220812);
+          cityMap.put("Boston", 20220928);
+          cityMap.put("Los Angeles", 20220928);
+          cityMap.put("Seattle", 20221103);
     
-      Map<Integer, List<String>> dateMap = cityMap  
-        .entrySet().stream().collect(Collectors  
-        .groupingBy(Map.Entry::getValue, Collectors  
-        .mapping(Map.Entry::getKey, Collectors.toList()))); 
-      TreeMap<Integer, List<String>> sortedDateMap = cityMap  
-        .entrySet().stream().collect(Collectors  
-        .groupingBy(Map.Entry::getValue, TreeMap::new, Collectors  
-        .mapping(Map.Entry::getKey, Collectors.toList())));
-    
-      System.out.println(dateMap);
-      // {20220928=[New York, Los Angeles, Boston], 20220812=[Chicago], 20221103=[Seattle]}
-    
-      System.out.println(sortedDateMap);
-      // {20220812=[Chicago], 20220928=[New York, Los Angeles, Boston], 20221103=[Seattle]}
-    }
+          Map<Integer, List<String>> dateMap = cityMap
+                  .entrySet().stream().collect(Collectors  
+                  .groupingBy(Map.Entry::getValue, Collectors  
+                  .mapping(Map.Entry::getKey, Collectors.toList()))); 
+                  
+          TreeMap<Integer, List<String>> sortedDateMap = cityMap  
+                  .entrySet().stream().collect(Collectors  
+                  .groupingBy(Map.Entry::getValue, TreeMap::new, 
+                  Collectors.mapping(Map.Entry::getKey, 
+                                     Collectors.toList())));
+          
+          /*
+           * Output:
+           * {20220928=[New York, Los Angeles, Boston], 
+           *  20220812=[Chicago], 20221103=[Seattle]}
+           */
+          System.out.println(dateMap);
+     
+          /*
+           * Output:
+           * {20220812=[Chicago], 
+           *  20220928=[New York, Los Angeles, Boston], 
+           *  20221103=[Seattle]}
+           */
+          System.out.println(sortedDateMap);
+      }
   }
   ```
 
@@ -311,17 +326,21 @@ The info I used for these examples can be found on [HowToDoInJava](https://howto
   import java.util.stream.Collectors;
 
   class Main {
-    public static void main(String[] args) {
-      int[] nums = {1, 2, 3, 4, 5};
-      HashSet<Integer> set = new HashSet<>(Arrays.stream(nums).boxed().collect(Collectors.toSet()));
-      List<Integer> list = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        
-      System.out.println(set);
-      // [1, 2, 3, 4, 5]
-        
-      System.out.println(list);
-      // [1, 2, 3, 4, 5]
-    }
+      public static void main(String[] args) {
+          int[] nums = {1, 2, 3, 4, 5};
+  
+          HashSet<Integer> set = new HashSet<>(Arrays
+                  .stream(nums).boxed().collect(Collectors.toSet()));
+  
+          List<Integer> list = Arrays.stream(nums)
+                  .boxed().collect(Collectors.toList());
+          
+          // Output: [1, 2, 3, 4, 5]
+          System.out.println(set);
+          
+          // Output: [1, 2, 3, 4, 5]
+          System.out.println(list);
+      }
   }
   ```
   
@@ -344,22 +363,33 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
   import java.util.HashMap;
 
   class Main {
-    public static void main(String[] args) {
-      HashMap<Character, Integer> map1 = new HashMap<>();
-      HashMap<Character, Integer> map2 = new HashMap<>();
+      public static void main(String[] args) {
+          HashMap<Character, Integer> map1 = new HashMap<>();
+          HashMap<Character, Integer> map2 = new HashMap<>();
         
-      map1.put('N', 127);
-      map2.put('N', 127);
-      System.out.println(map1.get('N') == map2.get('N')); // true
+          map1.put('N', 127);
+          map2.put('N', 127);
+          
+          // Output: true
+          System.out.println(map1.get('N') 
+                             == map2.get('N')); 
         
-      map1.put('N', 128);
-      map2.put('N', 128);
-      System.out.println(map1.get('N') == map2.get('N')); // false
-      System.out.println(map1.get('N').equals(map2.get('N'))); // true
+          map1.put('N', 128);
+          map2.put('N', 128);
+          
+          // Output: false
+          System.out.println(map1.get('N') 
+                             == map2.get('N')); 
+          
+          // Output: true
+          System.out.println(map1.get('N')
+                             .equals(map2.get('N'))); 
   
-      Integer num = new Integer(2);
-      System.out.println(num == Integer.valueOf(2)); // false
-    }
+          Integer num = new Integer(2);
+          
+          // Output: false
+          System.out.println(num == Integer.valueOf(2)); 
+      }
   }
   ```
   
@@ -380,33 +410,36 @@ The info I used for these examples can be found on [GeeksforGeeks](https://www.g
 
   ```java
   class Main {
-    interface Build {
-      int factorial(int n);
-    }
+      interface Build {
+          int factorial(int n);
+      }
     
-    public static void buildStr() {
-      StringBuilder sb = new StringBuilder(5);
-      Build builder = new Build() {
-        @Override
-        public int factorial(int n) {
-          if (n == 0 || n == 1) {
-            return 1;
-          }
+      public static void buildStr() {
+          StringBuilder sb = new StringBuilder(5);
+  
+          Build builder = new Build() {
+              @Override
+              public int factorial(int n) {
+                  if (n == 0 || n == 1) {
+                      return 1;
+                  }
                 
-          return n * factorial(n - 1);
-        };
-      };
+                  return n * factorial(n - 1);
+              };
+          };
         
-      for (int i = 0; i < 5; i++) {
-        sb.append(builder.factorial(i));
-      }    
+          for (int i = 0; i < 5; i++) {
+              sb.append(builder.factorial(i));
+          }    
         
-      System.out.println(sb.toString());
-    }
+          System.out.println(sb.toString());
+      }
     
-    public static void main(String[] args) {
-      buildStr(); // 112624
-    }
+      public static void main(String[] args) {
+                                
+          // Output: 112624
+          buildStr(); 
+      }
   }
   ```
   
@@ -436,41 +469,63 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   import static java.util.stream.Collectors.toMap;
 
   class Main {
-    public static void main(String[] args) {
-      int[] positions = {10, 8, 0, 5, 3};
-      int[] speeds = {2, 4, 1, 1, 3};
-      Map<Integer, Integer> velocities = IntStream.range(0, positions.length)
-        .boxed().collect(toMap(i -> positions[i], i -> speeds[i]));
-      Map<Integer, Integer> velocitiesOrdered = IntStream.range(0, positions.length)
-        .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
-        (i, j) -> i, LinkedHashMap::new));
-      Map<Integer, Integer> velocitiesSorted = IntStream.range(0, positions.length)
-        .boxed().sorted(comparing(i -> positions[i])).collect(toMap(
-        i -> positions[i], i -> speeds[i], (i, j) -> i, LinkedHashMap::new));
-      Supplier<TreeMap<Integer, Integer>> mapSupplier = () -> 
-        new TreeMap<>(reverseOrder());
-      Map<Integer, Integer> velocitiesReverseSorted = IntStream.range(0, positions.length)
-        .boxed().collect(toMap(i -> positions[i], i -> speeds[i],
-        (i, j) -> i, mapSupplier));
-      Map<Integer, Integer> velocitiesSpeedSorted = IntStream.range(0, positions.length)
-        .boxed().sorted(comparing(i -> speeds[i])).collect(toMap(
-        i -> positions[i], i -> speeds[i], (i, j) -> i, LinkedHashMap::new));
-
-      System.out.println(velocities);
-      // {0=1, 3=3, 5=1, 8=4, 10=2}
+      public static void main(String[] args) {
+          int[] positions = {10, 8, 0, 5, 3};
+          int[] speeds = {2, 4, 1, 1, 3};
+  
+          Map<Integer, Integer> velocities = IntStream
+                  .range(0, positions.length).boxed()
+                  .collect(toMap(i -> positions[i], 
+                                 i -> speeds[i]));
+  
+          Map<Integer, Integer> velocitiesOrdered = IntStream
+                  .range(0, positions.length).boxed()
+                  .collect(toMap(i -> positions[i], 
+                                 i -> speeds[i], 
+                                 (i, j) -> i, 
+                                 LinkedHashMap::new));
+  
+          Map<Integer, Integer> velocitiesSorted = IntStream
+                  .range(0, positions.length).boxed()
+                  .sorted(comparing(i -> positions[i]))
+                  .collect(toMap(i -> positions[i], 
+                                 i -> speeds[i], 
+                                 (i, j) -> i, 
+                                 LinkedHashMap::new));
+  
+          Supplier<TreeMap<Integer, Integer>> mapSupplier = () 
+                  -> new TreeMap<>(reverseOrder());
+  
+          Map<Integer, Integer> velocitiesReverseSorted = IntStream
+                  .range(0, positions.length).boxed()
+                  .collect(toMap(i -> positions[i], 
+                                 i -> speeds[i], 
+                                 (i, j) -> i, 
+                                 mapSupplier));
+  
+          Map<Integer, Integer> velocitiesSpeedSorted = IntStream
+                  .range(0, positions.length).boxed()
+                  .sorted(comparing(i -> speeds[i]))
+                  .collect(toMap(i -> positions[i], 
+                                 i -> speeds[i], 
+                                 (i, j) -> i, 
+                                 LinkedHashMap::new));
+  
+          // Output: {0=1, 3=3, 5=1, 8=4, 10=2}
+          System.out.println(velocities);
+          
+          // Output: {10=2, 8=4, 0=1, 5=1, 3=3}
+          System.out.println(velocitiesOrdered);
       
-      System.out.println(velocitiesOrdered);
-      // {10=2, 8=4, 0=1, 5=1, 3=3}
-      
-      System.out.println(velocitiesSorted);
-      // {0=1, 3=3, 5=1, 8=4, 10=2}
+          // Output: {0=1, 3=3, 5=1, 8=4, 10=2}
+          System.out.println(velocitiesSorted);
     
-      System.out.println(velocitiesReverseSorted);
-      // {10=2, 8=4, 5=1, 3=3, 0=1}
-    
-      System.out.println(velocitiesSpeedSorted);
-      // {0=1, 5=1, 10=2, 3=3, 8=4}
-    }
+          // Output: {10=2, 8=4, 5=1, 3=3, 0=1}
+          System.out.println(velocitiesReverseSorted);
+  
+          // Output: {0=1, 5=1, 10=2, 3=3, 8=4}
+          System.out.println(velocitiesSpeedSorted);
+      }
   }
   ```
   
@@ -500,69 +555,78 @@ The info I used for these examples can be found on [Techie Delight](https://www.
   import java.util.ArrayList;
 
   class Main {
-    public static void main(String[] args) {
-      Main main = new Main();
-      Main.TimeMap map = main.new TimeMap();
-      map.set("Server1", "User1", 145);
-      map.set("Server1", "User2", 565);
-      map.set("Server1", "User3", 35);
-      map.set("Server1", "User4", 13);
-      map.set("Server1", "User5", 145);
-      map.set("Server2", "User1", 23);
-      map.set("Server2", "User2", 19);
-      map.set("Server2", "User3", 61);
-        
-      System.out.println(map.get("Server1"));
-      // [User1, 145] [User2, 565] [User3, 35] [User4, 13] [User5, 145]
-        
-      System.out.println(map.get("Server2"));
-      // [User1, 23] [User2, 19] [User3, 61]
-    }
-    
-    class TimeMap {
-      HashMap<String, List<Pair<String, Integer>>> map;
-    
-      public TimeMap() {
-        map = new HashMap<>();
+      class Pair<T, V> {
+          private final T key;
+          private final V value;
+
+          public Pair(T key, V value) {
+              this.key = key;
+              this.value = value;
+          }
+
+          public T getKey() {
+              return key;
+          }
+
+          public V getValue() {
+              return value;
+          }
       }
+  
+  
+      class TimeMap {
+          HashMap<String, List<Pair<String, Integer>>> map;
     
-      public void set(String key, String value, int timestamp) {
-        if (!map.containsKey(key)) {
-          map.put(key, new ArrayList<>());
-        }
+          public TimeMap() {
+              map = new HashMap<>();
+          }
+    
+          public void set(String key, String value, int timestamp) {
+              if (!map.containsKey(key)) {
+                  map.put(key, new ArrayList<>());
+              }
       
-        map.get(key).add(new Pair(value, timestamp));
+              map.get(key).add(new Pair(value, timestamp));
+          }
+    
+          public String get(String key) {
+              String res = "";
+  
+              List<Pair<String, Integer>> list = map
+                      .getOrDefault(key, new ArrayList<>(0)); 
+            
+              for (Pair<String, Integer> p : list) {
+                  res += "[" + p.getKey() + ", " 
+                         + p.getValue() + "] ";
+              }
+            
+              return res;
+          }
       }
     
-      public String get(String key) {
-        String res = "";
-        List<Pair<String, Integer>> list = map.getOrDefault(key, new ArrayList<>(0)); 
-            
-        for (Pair<String, Integer> p : list) {
-          res += "[" + p.getKey() + ", " + p.getValue() + "] ";
-        }
-            
-        return res;
+      public static void main(String[] args) {
+          Main main = new Main();
+          Main.TimeMap map = main.new TimeMap();
+          map.set("Server1", "User1", 145);
+          map.set("Server1", "User2", 565);
+          map.set("Server1", "User3", 35);
+          map.set("Server1", "User4", 13);
+          map.set("Server1", "User5", 145);
+          map.set("Server2", "User1", 23);
+          map.set("Server2", "User2", 19);
+          map.set("Server2", "User3", 61);
+          
+          /*
+           * Output:
+           * [User1, 145] [User2, 565] [User3, 35]
+           * [User4, 13] [User5, 145]
+           */
+          System.out.println(map.get("Server1"));
+        
+          // Output: [User1, 23] [User2, 19] [User3, 61]
+          System.out.println(map.get("Server2"));
+      
       }
-    }
-    
-    class Pair<T, V> {
-      private final T key;
-      private final V value;
-
-      public Pair(T key, V value) {
-        this.key = key;
-        this.value = value;
-      }
-
-      public T getKey() {
-        return key;
-      }
-
-      public V getValue() {
-        return value;
-      }
-    }
   }
   ```
   
@@ -586,66 +650,66 @@ The info I used for these first examples can be found on [GitHub](https://github
   import java.util.PriorityQueue;
 
   class Main {
-    public static void main(String[] args) {
-      Main main = new Main();
-      int[][] points = {{3, 3}, {5, -1}, {-2, 4}};
-        
-      System.out.println(Arrays.deepToString(main.kClosestMinHeap(points, 2)));
-      // [[3, 3], [-2, 4]]
-        
-      System.out.println(Arrays.deepToString(main.kClosestMaxHeap(points, 2)));
-      // [[-2, 4], [3, 3]]
-    }
+      public int[][] kClosestMinHeap(int[][] points, int k) { 
+          PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) 
+                  -> Double.compare(Math.pow(a[0], 2) 
+                                    + Math.pow(a[1], 2),
+                                    Math.pow(b[0], 2) 
+                                    + Math.pow(b[1], 2)));
+
+          for (int[] point : points) {
+              pq.offer(point);
+          }
+
+          int[][] res = new int[k][2]; 
+
+          for (int i = 0; i < k; i++) {
+              int[] cur = pq.poll();
+              res[i][0] = cur[0];
+              res[i][1] = cur[1];
+          }
+
+          return res;
+      }
     
-    public int[][] kClosestMinHeap(int[][] points, int k) { 
-      PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> 
-        Double.compare(
-          Math.pow(a[0], 2) + Math.pow(a[1], 2),
-          Math.pow(b[0], 2) + Math.pow(b[1], 2)
-        )
-      );
+      public int[][] kClosestMaxHeap(int[][] points, int k) { 
+          PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) 
+                  -> Double.compare(Math.pow(b[0], 2) 
+                                    + Math.pow(b[1], 2),
+                                    Math.pow(a[0], 2) 
+                                    + Math.pow(a[1], 2)));
 
-      for (int[] point : points) {
-        pq.offer(point);
+          for (int[] point : points) {
+              pq.offer(point);
+
+              if (pq.size() > k) {
+                  pq.poll();
+              }
+          }
+
+          int[][] res = new int[k][2]; 
+
+          for (int i = 0; i < k; i++) {
+              int[] cur = pq.poll();
+              res[i][0] = cur[0];
+              res[i][1] = cur[1];
+          }
+
+          return res;
       }
-
-      int[][] res = new int[k][2]; 
-
-      for (int i = 0; i < k; i++) {
-        int[] cur = pq.poll();
-        res[i][0] = cur[0];
-        res[i][1] = cur[1];
+                                                         
+      public static void main(String[] args) {
+          Main main = new Main();
+          int[][] points = {{3, 3}, {5, -1}, {-2, 4}};
+        
+          // Output: [[3, 3], [-2, 4]]
+          System.out.println(Arrays.deepToString(main
+                  .kClosestMinHeap(points, 2)));
+                                                         
+          // Output: [[-2, 4], [3, 3]]
+          System.out.println(Arrays.deepToString(main
+                  .kClosestMaxHeap(points, 2)));
       }
-
-      return res;
-    }
-    
-    public int[][] kClosestMaxHeap(int[][] points, int k) { 
-      PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> 
-        Double.compare(
-          Math.pow(b[0], 2) + Math.pow(b[1], 2),
-          Math.pow(a[0], 2) + Math.pow(a[1], 2)
-        )
-      );
-
-      for (int[] point : points) {
-        pq.offer(point);
-
-        if (pq.size() > k) {
-          pq.poll();
-        }
-      }
-
-      int[][] res = new int[k][2]; 
-
-      for (int i = 0; i < k; i++) {
-        int[] cur = pq.poll();
-        res[i][0] = cur[0];
-        res[i][1] = cur[1];
-      }
-
-      return res;
-    }
   }
   ```
 
@@ -669,93 +733,91 @@ The info I used for the next examples can be found on [Stack Overflow Link 1](ht
   import java.util.PriorityQueue;
 
   class Main {
-    public static void main(String[] args) {
-      Main main = new Main();
+      class ListNode implements Comparable<ListNode> {
+          int val;
+          ListNode next;
+          ListNode() {}
+          ListNode(int val) { this.val = val; }
+          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
       
-      // List Node 1
-      Main.ListNode list1Tail = main.new ListNode(5);
-      Main.ListNode list1N = main.new ListNode(4, list1Tail);
-      Main.ListNode list1Head = main.new ListNode(1, list1N);
+          @Override
+          public int compareTo(ListNode n) {
+              if (this.val < n.val) {
+                  return -1;
+              } else if (this.val > n.val) {
+                  return 1;
+              } else {
+                  return 0;
+              }
+          }
+
+          @Override
+          public String toString() {
+              String result = val + " -> ";
       
-      // List Node 2
-      Main.ListNode list2Tail = main.new ListNode(4);
-      Main.ListNode list2N = main.new ListNode(3, list2Tail);
-      Main.ListNode list2Head = main.new ListNode(1, list2N);
+              if (next != null) {
+                  result += next.toString();
+              }
       
-      // List Node 3
-      Main.ListNode list3Tail = main.new ListNode(6);
-      Main.ListNode list3Head = main.new ListNode(2, list3Tail);
-      
-      ListNode[] lists = {list1Head, list2Head, list3Head};
-      ListNode mergedListsHead = main.mergeKLists(lists);
-  
-      System.out.println(mergedListsHead.toString());
-      // 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 ->
-    }
+              return result;
+          }
+      }
     
-    public ListNode mergeKLists(ListNode[] lists) {
-      if (lists == null || lists.length == 0) {
-        return null;
-      }
+      public ListNode mergeKLists(ListNode[] lists) {
+          if (lists == null || lists.length == 0) {
+              return null;
+          }
 
-      // PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
-      PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.compareTo(b));
+          // PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) 
+          //         -> a.val - b.val);
+          PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) 
+                  -> a.compareTo(b));
 
-      for (ListNode n : lists) {
-        if (n != null) {
-          queue.offer(n);  
-        } 
-      }
+          for (ListNode n : lists) {
+              if (n != null) {
+                  queue.offer(n);  
+              } 
+          }
 
-      ListNode dummy = new ListNode(0);
-      ListNode curr = dummy;
+          ListNode dummy = new ListNode(0);
+          ListNode curr = dummy;
     
-      while (!queue.isEmpty()) {
-        ListNode n = queue.poll();
-        curr.next = n;
-        curr = curr.next;
+          while (!queue.isEmpty()) {
+              ListNode n = queue.poll();
+              curr.next = n;
+              curr = curr.next;
 
-        if (n.next != null) {
-          queue.offer(n.next);
-        }
-      }
+              if (n.next != null) {
+                  queue.offer(n.next);
+              }
+          }
 
-      return dummy.next;
-    }
-    
-    class ListNode implements Comparable<ListNode> {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-      
-      @Override
-      public int compareTo(ListNode n) {
-        if (this.val < n.val) {
-          return -1;
-        }
-                             
-        else if (this.val > n.val) {
-          return 1;
-        }
-  
-        else {
-          return 0;
-        }
+          return dummy.next;
       }
-
-      @Override
-      public String toString() {
-        String result = val + " -> ";
+            
+      public static void main(String[] args) {
+          Main main = new Main();
       
-        if (next != null) {
-          result += next.toString();
-        }
+          // List Node 1
+          Main.ListNode list1Tail = main.new ListNode(5);
+          Main.ListNode list1N = main.new ListNode(4, list1Tail);
+          Main.ListNode list1Head = main.new ListNode(1, list1N);
       
-        return result;
+          // List Node 2
+          Main.ListNode list2Tail = main.new ListNode(4);
+          Main.ListNode list2N = main.new ListNode(3, list2Tail);
+          Main.ListNode list2Head = main.new ListNode(1, list2N);
+      
+          // List Node 3
+          Main.ListNode list3Tail = main.new ListNode(6);
+          Main.ListNode list3Head = main.new ListNode(2, list3Tail);
+      
+          ListNode[] lists = {list1Head, list2Head, list3Head};
+          ListNode mergedListsHead = main.mergeKLists(lists);
+          
+          // Output: 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 ->
+          System.out.println(mergedListsHead.toString());
       }
-    }
   }
   ```
   
@@ -783,22 +845,26 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   import java.util.HashSet;
   
   class Main {
-    public static void main(String[] args) {
-      int x = 0;
-      int y = 1;
-      int[] arr1 = {x, y};
-      int[] arr2 = {x, y};
-      List<Integer> list1 = List.of(x, y);
-      List<Integer> list2 = List.of(x, y);
-      HashSet<int[]> set1 = new HashSet<>();
-      HashSet<List<Integer>> set2 = new HashSet<>();
+      public static void main(String[] args) {
+          int x = 0;
+          int y = 1;
+          int[] arr1 = {x, y};
+          int[] arr2 = {x, y};
+          List<Integer> list1 = List.of(x, y);
+          List<Integer> list2 = List.of(x, y);
+          HashSet<int[]> set1 = new HashSet<>();
+          HashSet<List<Integer>> set2 = new HashSet<>();
         
-      set1.add(arr1);
-      System.out.println(set1.contains(arr2)); // false
+          set1.add(arr1);
+          
+          // Output: false
+          System.out.println(set1.contains(arr2));
         
-      set2.add(list1);
-      System.out.println(set2.contains(list2)); // true
-    }
+          set2.add(list1);
+         
+          // Output: true
+          System.out.println(set2.contains(list2)); 
+      }
   }
   ```
   
