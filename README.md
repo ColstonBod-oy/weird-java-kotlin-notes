@@ -158,6 +158,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#lexicographically-sort-a-2d-list">Lexicographically Sort A 2D List</a>
+      <details>
+        <summary>11a</summary>
+        <ul>
+          <li><a href="#11a-examples">11a Examples</a></li>
+          <li><a href="#11a-description">11a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -876,6 +886,63 @@ In the above example, we're creating two ```HashSet``` objects, one of which acc
 
 
 
+<!-- LEXICOGRAPHICALLY SORT A 2D LIST -->
+## Lexicographically Sort A 2D List
+
+The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array) which shows how to sort a 2d array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
+
+### 11a Examples
+
+  ```java
+  import java.util.List;
+  import java.util.Arrays;
+  import java.util.ArrayList;
+  import java.util.Collections;
+
+  class Main {
+      public static void main(String[] args) {
+          List<List<String>> tickets = new ArrayList<>(List
+                  .of(List.of("JFK", "SFO"),
+                      List.of("ATL", "JFK"),
+                      List.of("SFO", "ATL"),
+                      List.of("JFK", "ATL"),
+                      List.of("ATL", "SFO")));
+        
+          /*
+           * Output:
+           * [[JFK, SFO], [ATL, JFK], [SFO, ATL], 
+           *  [JFK, ATL], [ATL, SFO]] 
+           */
+          System.out.println(Arrays
+                             .deepToString(tickets.toArray()));
+        
+          Collections.sort(tickets, (a, b) -> {
+              if (a.get(0).equals(b.get(0))) {
+                  return a.get(1).compareTo(b.get(1));
+              }
+
+              return a.get(0).compareTo(b.get(0));
+          });
+        
+          /*
+           * Output:
+           * [[ATL, JFK], [ATL, SFO], [JFK, ATL], 
+           *  [JFK, SFO], [SFO, ATL]]
+           */
+          System.out.println(Arrays
+                             .deepToString(tickets.toArray()));
+      }
+  }
+  ```
+  
+### 11a Description
+  
+In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
+  
+  
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [github-shield]: https://img.shields.io/github/followers/ColstonBod-oy?style=social
