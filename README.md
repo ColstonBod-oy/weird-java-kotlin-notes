@@ -168,6 +168,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#iterate-through-a-hashmap">Iterate Through A HashMap</a>
+      <details>
+        <summary>12a</summary>
+        <ul>
+          <li><a href="#12a-examples">12a Examples</a></li>
+          <li><a href="#12a-description">12a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -938,6 +948,73 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
 ### 11a Description
   
 In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
+  
+  
+<!-- ITERATE THROUGH A HASHMAP -->
+## Iterate Through A HashMap
+
+The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
+
+### 12a Examples
+
+  ```java
+  import java.util.Map;
+  import java.util.HashSet;
+  import java.util.HashMap;
+
+  class Main {
+      public static void main(String[] args) {
+          String alienWord = "wertf";
+        
+          HashMap<Character, HashSet<Character>> charMap 
+          = new HashMap<>();
+        
+          for (int i = 0; i < alienWord.length() - 1; i++) {
+              for (char letter : alienWord.substring(i + 1)
+                                          .toCharArray()) {
+                  charMap.computeIfAbsent(alienWord.charAt(i), 
+                                          k -> new HashSet<>())
+                         .add(letter); 
+              }
+          }
+        
+          /*
+           * Output:
+           * r: [t, f] 
+           * t: [f]
+           * e: [r, t, f]
+           * w: [r, t, e, f]
+           */
+          for (Map.Entry<Character, HashSet<Character>> set 
+                  : charMap.entrySet()) {
+              System.out.println(set.getKey() + ": " 
+                                 + set.getValue());
+          }
+        
+          // Output: r t e w 
+          for (char c : charMap.keySet()) {
+              System.out.print(c + " ");
+          }
+        
+          /*
+           * Output:
+           * r: [t, f] 
+           * t: [f]
+           * e: [r, t, f]
+           * w: [r, t, e, f]
+           */
+          charMap.forEach((k, v) 
+                          -> System.out.println(k + ": " + v));
+      }
+  }
+  ```
+  
+### 12a Description
+  
+In the above example, we're trying to map characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
   
