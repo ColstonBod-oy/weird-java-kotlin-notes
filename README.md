@@ -1059,7 +1059,9 @@ The infos I used for this example can be found on [GeeksforGeeks](https://www.ge
   
 ### 13a Description
   
-In the above example, we're trying to map characters of the ```alienWord``` variable to an array by converting them to an integer which would serve as their index on the array, we can do this by subtracting their ```ASCII``` numeric value to that of the character 'a' so 'a' - 'a' whould yield a result of zero meaning that the boolean value ree character would be stored at the index in the array (note that our array has a fixed size of 26 since there's only 26 letters in the english alphabet)
+In the above example, we're trying to map characters of the ```alienWord``` variable to an array by converting them to an integer, which would serve as their index on the array. We can do this by subtracting their ```ASCII``` numeric value from that of the character 'a', so 'a' - 'a' would yield a result of zero, meaning that the ```boolean``` value that represents whether or not that character exists in the ```alienWord``` variable would be stored at that index in the array (note that our array has a fixed size of 26 since there are only 26 letters in the english alphabet), which has a default value of ```false``` and would be set to ```true``` as the resulting index was accessed in the array.
+                                               
+Once all of the array indexes correlating to characters in the word have been marked ```true```, the program would convert said indexes back to their character equivalent by adding to them the ```ASCII``` numeric value of '0' and increasing the result by 49 to get back the ```ASCII``` numeric value of the character 'a' onwards. For example, 0 + '0' is equal to 48, and adding 49 to it would result in 97, which is the ```ASCII``` value for the character 'a'.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
   
