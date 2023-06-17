@@ -178,6 +178,16 @@
         </ul>
       </details>
     </li>
+    <li>
+      <a href="#convert-character-to-integer-and-vice-versa">Convert Character To Integer And Vice Versa</a>
+      <details>
+        <summary>13a</summary>
+        <ul>
+          <li><a href="#13a-examples">13a Examples</a></li>
+          <li><a href="#13a-description">13a Description</a></li>
+        </ul>
+      </details>
+    </li>
   </ol>
 </details>
 
@@ -1015,6 +1025,41 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
 ### 12a Description
   
 In the above example, we're trying to map characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
+  
+  
+<!-- CONVERT CHARACTER TO INTEGER AND VICE VERSA -->
+## Convert Character To Integer And Vice Versa
+
+The infos I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
+
+### 13a Examples
+
+  ```java
+  class Main {
+      public static void main(String[] args) {
+          String alienWord = "wertf";
+          boolean[] alphabets = new boolean[26];
+        
+          for (char c : alienWord.toCharArray()) {
+              alphabets[c - 'a'] = true;
+          }
+        
+          // Output: efrtw
+          for (int i = 0; i < alphabets.length; i++) {
+              if (alphabets[i]) {
+                  System.out.print((char) (i + '0' + 49));
+              }
+          }
+      }
+  }
+  ```
+  
+### 13a Description
+  
+In the above example, we're trying to map characters of the ```alienWord``` variable to an array by converting them to an integer which would serve as their index on the array, we can do this by subtracting their ```ASCII``` numeric value to that of the character 'a' so 'a' - 'a' whould yield a result of zero meaning that the boolean value ree character would be stored at the index in the array (note that our array has a fixed size of 26 since there's only 26 letters in the english alphabet)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
   
