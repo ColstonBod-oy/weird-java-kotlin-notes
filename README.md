@@ -179,7 +179,7 @@
       </details>
     </li>
     <li>
-      <a href="#convert-character-to-integer-and-vice-versa">Convert Character To Integer And Vice Versa</a>
+      <a href="#map-characters-to-an-array">Map Characters To An Array</a>
       <details>
         <summary>13a</summary>
         <ul>
@@ -1030,8 +1030,8 @@ In the above example, we're trying to map the characters of the ```alienWord``` 
   
   
   
-<!-- CONVERT CHARACTER TO INTEGER AND VICE VERSA -->
-## Convert Character To Integer And Vice Versa
+<!-- MAP CHARACTERS TO AN ARRAY -->
+## Map Characters To An Array
 
 The infos I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
 
