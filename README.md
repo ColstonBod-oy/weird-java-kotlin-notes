@@ -214,7 +214,7 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
 
 👉 [📒](https://github.com/othneildrew/Best-README-Template)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -277,7 +277,7 @@ We used the ```keySet()``` method of the ```HashMap``` class to get a set view o
   
 We also used ```Integer.parseInt()``` on the last example to return an ```int``` from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -343,7 +343,7 @@ In the first example, we used ```Entry.getValue()``` as our classification funct
   
 By doing all of the operations, we ended up with a ```Map``` instance that has the swapped key-value pairs from the initial map. Notice how we have duplicate values from our previous map, so when they're converted to keys, each of their previously associated keys are added inside a ```List```. The second example was pretty much the same as the first, the only difference is that we've added a supplier method - ```TreeMap::new``` which specifies the exact implementation of ```Map``` we want to use. This time it uses a ```TreeMap``` implementation so the keys for our new map are automatically sorted.     
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -383,7 +383,7 @@ The info I used for these examples can be found on [HowToDoInJava](https://howto
 
 The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
 
 
@@ -432,7 +432,7 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
 
 When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -482,7 +482,7 @@ The info I used for these examples can be found on [GeeksforGeeks](https://www.g
 
 Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -572,7 +572,7 @@ For the third example, we used the ```Comparator.comparing``` method to compare 
   
 We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the positions array. Finally, we used the speeds array as the basis for the sorting of the fifth example.      
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -669,7 +669,7 @@ The info I used for these examples can be found on [Techie Delight](https://www.
   
 Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key as shown in the examples.    
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -756,7 +756,7 @@ Instead of creating a new ```Comparator``` object, we could just use Java 8's la
         
 We could save more space by using a max heap instead of a min heap, as shown in the second example; we were able to convert the ```Comparator``` for the max heap by flipping the conditions where we have the second array in our lambda expression as the first argument in our ```Double.compare()``` method (note that we used ```Double``` instead of ```Integer``` because the ```Math.pow()``` method returns a ```double``` value).
         
-<p align="right">(<a href="#top">back to top</a>)</p>  
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>  
   
   
 
@@ -864,7 +864,7 @@ To solve the previous problem, we must implement the ```Comparable``` interface 
 
 This method of creating a comparator for the ```PriorityQueue``` is preferred over the examples in 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
   
  
@@ -907,7 +907,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   
 In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since its storing ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation which uses a custom class).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
 
 
@@ -964,7 +964,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   
 In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
   
   
@@ -1031,7 +1031,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   
 In the above example, we're trying to map the characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
   
   
@@ -1068,7 +1068,7 @@ In the above example, we're trying to map the characters of the ```alienWord``` 
                                                
 Once all of the array indexes correlating to characters in the word have been marked ```true```, the program would convert said indexes back to their character equivalent by adding to them the ```ASCII``` numeric value of ```'0'``` and increasing the result by ```49``` to get back the ```ASCII``` numeric value of the character ```'a'``` onwards. For example, ```0 + '0'``` is equal to ```48```, and adding ```49``` to it would result in ```97```, which is the ```ASCII``` value for the character ```'a'``` (note that the resulting string printed doesn't have the exact same order as the original one since the characters are mapped to their equivalant index based on their position on the English alphabet).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
   
   
