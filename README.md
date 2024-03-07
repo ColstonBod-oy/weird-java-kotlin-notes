@@ -80,7 +80,7 @@
         <details>
           <summary>2a.J</summary>
           <ul>
-            <li><a href="#2a.J-examples">2a.J Example</a></li>
+            <li><a href="#2a.J-example">2a.J Example</a></li>
             <li><a href="#2a.J-description">2a.J Description</a></li>
           </ul>
         </details>
@@ -90,7 +90,7 @@
         <details>
           <summary>3a.J</summary>
           <ul>
-            <li><a href="#3a.J-examples">3a.J Example</a></li>
+            <li><a href="#3a.J-example">3a.J Example</a></li>
             <li><a href="#3a.J-description">3a.J Description</a></li>
           </ul>
         </details>
@@ -100,7 +100,7 @@
         <details>
           <summary>4a.J</summary>
           <ul>
-            <li><a href="#4a.J-examples">4a.J Example</a></li>
+            <li><a href="#4a.J-example">4a.J Example</a></li>
             <li><a href="#4a.J-description">4a.J Description</a></li>
           </ul>
         </details>
@@ -110,7 +110,7 @@
         <details>
           <summary>5a.J</summary>
           <ul>
-            <li><a href="#5a.J-examples">5a.J Example</a></li>
+            <li><a href="#5a.J-example">5a.J Example</a></li>
             <li><a href="#5a.J-description">5a.J Description</a></li>
           </ul>
         </details>
@@ -120,7 +120,7 @@
         <details>
           <summary>6a.J</summary>
           <ul>
-            <li><a href="#6a.J-examples">6a.J Example</a></li>
+            <li><a href="#6a.J-example">6a.J Example</a></li>
             <li><a href="#6a.J-description">6a.J Description</a></li>
           </ul>
         </details>
@@ -130,7 +130,7 @@
         <details>
           <summary>7a.J</summary>
           <ul>
-            <li><a href="#7a.J-examples">7a.J Example</a></li>
+            <li><a href="#7a.J-example">7a.J Example</a></li>
             <li><a href="#7a.J-description">7a.J Description</a></li>
           </ul>
         </details>
@@ -140,14 +140,14 @@
         <details>
           <summary>8a.J</summary>
           <ul>
-            <li><a href="#8a.J-examples">8a.J Example</a></li>
+            <li><a href="#8a.J-example">8a.J Example</a></li>
             <li><a href="#8a.J-description">8a.J Description</a></li>
           </ul>
         </details>
         <details>
           <summary>8b.J</summary>
           <ul>
-            <li><a href="#8b.J-examples">8b.J Example</a></li>
+            <li><a href="#8b.J-example">8b.J Example</a></li>
             <li><a href="#8b.J-description">8b.J Description</a></li>
           </ul>
         </details>
@@ -157,7 +157,7 @@
         <details>
           <summary>9a.J</summary>
           <ul>
-            <li><a href="#9a.J-examples">9a.J Example</a></li>
+            <li><a href="#9a.J-example">9a.J Example</a></li>
             <li><a href="#9a.J-description">9a.J Description</a></li>
           </ul>
         </details>
@@ -167,7 +167,7 @@
         <details>
           <summary>10a.J</summary>
           <ul>
-            <li><a href="#10a.J-examples">10a.J Example</a></li>
+            <li><a href="#10a.J-example">10a.J Example</a></li>
             <li><a href="#10a.J-description">10a.J Description</a></li>
           </ul>
         </details>
@@ -177,7 +177,7 @@
         <details>
           <summary>11a.J</summary>
           <ul>
-            <li><a href="#11a.J-examples">11a.J Example</a></li>
+            <li><a href="#11a.J-example">11a.J Example</a></li>
             <li><a href="#11a.J-description">11a.J Description</a></li>
           </ul>
         </details>
@@ -187,7 +187,7 @@
         <details>
           <summary>12a.J</summary>
           <ul>
-            <li><a href="#12a.J-examples">12a.J Example</a></li>
+            <li><a href="#12a.J-example">12a.J Example</a></li>
             <li><a href="#12a.J-description">12a.J Description</a></li>
           </ul>
         </details>
