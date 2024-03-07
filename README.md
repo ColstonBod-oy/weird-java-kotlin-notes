@@ -207,7 +207,7 @@
 
 ![Banner][java-logo]
 
-&emsp;&emsp;Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
+&emsp;&emsp;&emsp;Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
   
 &emsp;&emsp;I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
 
