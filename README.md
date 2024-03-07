@@ -42,10 +42,10 @@
     ·
     <a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-cheat-sheet.html">Stream API Cheat Sheet</a>
     <br/>
-    [![Gmail][gmail-shield]][gmail-url]&ensp;
-    [![Facebook][facebook-shield]][facebook-url]&ensp;
-    [![Instagram][insta-shield]][insta-url]&ensp;
-    [![Twitter][twitter-shield]][twitter-url]&ensp;
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+    <a href="https://www.facebook.com/colston.bodoy/"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white"/></a>
+    <a href="https://www.instagram.com/coldz.stone/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
+    <a href="https://twitter.com/OyColston"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=for-the-badge"/></a>
   </p>
 </div>
 
@@ -1077,12 +1077,4 @@ Once all of the array indexes correlating to characters in the word have been ma
   
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[gmail-url]: https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com
-[facebook-shield]: https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white
-[facebook-url]: https://www.facebook.com/colston.bodoy/
-[insta-shield]: https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white
-[insta-url]: https://www.instagram.com/coldz.stone/
-[twitter-shield]: https://img.shields.io/twitter/url?style=for-the-badge
-[twitter-url]: https://twitter.com/OyColston
 [java-logo]: images/java-logo.png
