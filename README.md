@@ -30,12 +30,13 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Weird Java Notes</h3>
+  <h3 align="center">Weird Java & Kotlin Notes</h3>
 
   <p align="center">
-    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of Java!
+    My lifelong notes about the weird 😵‍💫 and wild 🤪 features of Java & Kotlin!
     <br />
-    <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>&nbsp;
+    <a href="https://kotlinlang.org/docs/home.html"><strong>Explore the docs (Kotlin) »</strong></a>
     <br />
     <br />
     <a href="https://java-8-tips.readthedocs.io/en/stable/quickintro.html">Stream API Docs</a>
@@ -198,9 +199,9 @@
 
 ![Banner][java-logo]
 
-Hello! My name is Colston D. Bod-oy, I'm a React developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer and I would like to work for the big FAANG companies someday 😉.  
-  
-I created this project so I could keep track of and recall things that I didn't know I could do in Java as I've just recently started learning it, hope you'll find these notes useful! 😎.
+Hello! My name is Colston D. Bod-oy, I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.  
+  
+I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning it on a deeper level. I hope you'll find these notes useful! 😎.
 
 
 ### README Template
