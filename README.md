@@ -63,8 +63,7 @@
       </details>
     </li>
   </ol>
-</details>
-<details>
+  <details>
   <summary>Java</summary>
   <ol>
     <li>
@@ -195,6 +194,7 @@
       </details>
     </li>
   </ol>
+</details>
 </details>
 
 
