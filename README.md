@@ -17,13 +17,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![GitHub][github-shield]][github-url]&ensp;
-[![Twitter][twitter-shield]][twitter-url]&ensp;
 
 
 
 <!-- PROJECT LOGO -->
-<br />
+<br/>
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -33,16 +31,21 @@
 
   <p align="center">
     My lifelong notes about the weird 😵‍💫 and wild 🤪 features of Java & Kotlin!
-    <br />
+    <br/>
     <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>&nbsp;
     <a href="https://kotlinlang.org/docs/home.html"><strong>Explore the docs (Kotlin) »</strong></a>
-    <br />
-    <br />
+    <br/>
+    <br/>
     <a href="https://java-8-tips.readthedocs.io/en/stable/quickintro.html">Stream API Docs</a>
     ·
     <a href="https://philvarner.github.io/pages/modern-java.html">Java 8 Cheat Sheet</a>
     ·
     <a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-cheat-sheet.html">Stream API Cheat Sheet</a>
+    <br/>
+    [![Gmail][gmail-shield]][gmail-url]&ensp;
+    [![Facebook][facebook-shield]][facebook-url]&ensp;
+    [![Instagram][insta-shield]][insta-url]&ensp;
+    [![Twitter][twitter-shield]][twitter-url]&ensp;
   </p>
 </div>
 
@@ -221,7 +224,7 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
 <!-- GET AN ARRAY OF MAPS KEYS -->
 ## Get An Array Of Map's Keys  
 
-I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
+I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys), which converts a set of map keys into an array.
 
 ### 1a-J Example  
 
@@ -273,7 +276,7 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
 
 ### 1a-J Description  
 
-We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
+We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we created a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
   
 We also used ```Integer.parseInt()``` on the last example to return an ```int``` from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
 
@@ -284,7 +287,7 @@ We also used ```Integer.parseInt()``` on the last example to return an ```int```
 <!-- SWAP KEYS AND VALUES IN A MAP -->
 ## Swap Keys And Values In A Map 
 
-I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
+I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly), which swap the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
 ### 2a-J Example
 
@@ -335,13 +338,13 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4
 
 ### 2a-J Description
 
-First, the set view of the mappings was obtained to create a new stream then we apply the ```Stream.collect()``` method which performs a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
+First, the set view of the mappings was obtained to create a new stream, and then we applied the ```Stream.collect()``` method, which performed a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
-We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and store the end result in a map. The ```Collector``` makes a Map<K, List<T>>, whose keys are the values resulting from applying the classification function on the input elements. Each value of those keys are a ```List``` containing the input elements which map to the associated key.  
+We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and stores the end result in a map. The ```Collector``` makes a Map<K, List<T>>, whose keys are the values resulting from applying the classification function to the input elements. Each value of those keys is a ```List``` containing the input elements, which map to the associated key.  
   
-In the first example, we used ```Entry.getValue()``` as our classification function and ```Collectors.mapping()``` to apply a reduction operation on the values associated with a given key. Using ```Entry.getKey()``` as our mapping function, we we're able to reduce our data to only use keys as values. Finally, ```Collectors.toList()``` was used as the downstream collector to accept the mapped values.  
+In the first example, we used ```Entry.getValue()``` as our classification function and ```Collectors.mapping()``` to apply a reduction operation to the values associated with a given key. Using ```Entry.getKey()``` as our mapping function, we're able to reduce our data to only use keys as values. Finally, ```Collectors.toList()``` was used as the downstream collector to accept the mapped values.  
   
-By doing all of the operations, we ended up with a ```Map``` instance that has the swapped key-value pairs from the initial map. Notice how we have duplicate values from our previous map, so when they're converted to keys, each of their previously associated keys are added inside a ```List```. The second example was pretty much the same as the first, the only difference is that we've added a supplier method - ```TreeMap::new``` which specifies the exact implementation of ```Map``` we want to use. This time it uses a ```TreeMap``` implementation so the keys for our new map are automatically sorted.     
+By doing all of the operations, we ended up with a ```Map``` instance that has the swapped key-value pairs from the initial map. Notice how we have duplicate values from our previous map, so when they're converted to keys, each of their previously associated keys is added inside a ```List```. The second example was pretty much the same as the first; the only difference is that we've added a supplier method, ```TreeMap::new```, which specifies the exact implementation of ```Map``` we want to use. This time it uses a ```TreeMap``` implementation, so the keys for our new map are automatically sorted.     
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -350,7 +353,7 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 <!-- CONVERT ARRAY OF PRIMITIVES TO A LIST OR SET -->
 ## Convert Array Of Primitives To A List Or Set
 
-The info I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
+The information I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/), which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
 ### 3a-J Example
 
@@ -381,7 +384,7 @@ The info I used for these examples can be found on [HowToDoInJava](https://howto
   
 ### 3a-J Description
 
-The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
+The array was first converted to a stream, and since it's a stream of primitives, we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
@@ -390,7 +393,7 @@ The array was first converted to a stream and since it's a stream of primitives 
 <!-- COMPARE WRAPPER TYPES -->
 ## Compare Wrapper Types
 
-The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal) which shows why the ```Integer``` objects are not equal.
+The information I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal), which shows why the ```Integer``` objects are not equal.
 
 ### 4a-J Example
 
@@ -430,7 +433,7 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
   
 ### 4a-J Description
 
-When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
+When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, use ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer```, use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object, as shown in the last example.  
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -439,7 +442,7 @@ When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```
 <!-- NEST METHODS -->
 ## Nest Methods
 
-The info I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/) which shows the different ways we could nest methods in Java.
+The information I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/), which shows the different ways we could nest methods in Java.
 
 ### 5a-J Example
 
@@ -489,7 +492,7 @@ Java does not support nested methods, so we used an anonymous subclass from the 
 <!-- MAP TWO ARRAYS TO A HASHMAP -->
 ## Map Two Arrays To A HashMap
 
-The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order) which allows sorting of the map as well.
+The information I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order), which allow sorting of the map as well.
 
 ### 6a-J Example
 
@@ -566,11 +569,11 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   
 ### 6a-J Description
 
-To use the ```Collectors.toMap()``` method we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter which was shown in the second example.  
+To use the ```Collectors.toMap()``` method, we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter, which was shown in the second example.  
   
-For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function as well for this example and the fifth example to maintain the sorted values when collecting them into a map.  
+For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function for this example and the fifth example to maintain the sorted values when collecting them into a map.  
   
-We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the positions array. Finally, we used the speeds array as the basis for the sorting of the fifth example.      
+We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and used it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the position array. Finally, we used the speed array as the basis for the sorting of the fifth example.      
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -579,7 +582,7 @@ We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as th
 <!-- STORE KEY-VALUE PAIRS IN A LIST -->
 ## Store Key-Value Pairs In A List
 
-The info I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/) which shows how to implement a ```Pair``` class.
+The information I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/), which shows how to implement a ```Pair``` class.
 
 ### 7a-J Example
 
@@ -667,7 +670,7 @@ The info I used for these examples can be found on [Techie Delight](https://www.
   
 ### 7a-J Description
   
-Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key as shown in the examples.    
+Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key, as shown in the examples.    
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -675,8 +678,8 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
 
 <!-- CREATE A NODE PRIORITY QUEUE WITH COMPARATOR -->
 ## Create A Node Priority Queue With Comparator
-  
-The info I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java) which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/). 
+
+The information I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java), which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/).
 
 ### 8a-J Example
   
@@ -760,7 +763,7 @@ We could save more space by using a max heap instead of a min heap, as shown in 
   
   
 
-The info I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
+The information I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow), which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers, thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
 ### 8b-J Example
 
@@ -871,7 +874,7 @@ This method of creating a comparator for the ```PriorityQueue``` is preferred ov
 <!-- CREATE A HASHSET OF ARRAYS -->
 ## Create A HashSet Of Arrays
 
-The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) which shows different ways on how to implement a ```HashSet``` containing arrays/collections as elements.
+The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint), which shows different ways to implement a ```HashSet``` containing arrays or collections as elements.
 
 ### 9a-J Example
 
@@ -905,7 +908,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   
 ### 9a-J Description
   
-In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since its storing ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation which uses a custom class).
+In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since it stores ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation that uses a custom class).
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -914,7 +917,7 @@ In the above example, we're creating two ```HashSet``` objects, one of which acc
 <!-- LEXICOGRAPHICALLY SORT A 2D LIST -->
 ## Lexicographically Sort A 2D List
 
-The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array) which shows how to sort a 2d array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
+The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array), which shows how to sort a 2D array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
 
 ### 10a-J Example
 
@@ -971,7 +974,7 @@ In the above example, we're trying to sort a 2D ```List``` of tickets that conta
 <!-- ITERATE THROUGH A HASHMAP -->
 ## Iterate Through A HashMap
 
-The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
+The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
 
 ### 11a-J Example
 
@@ -1038,7 +1041,7 @@ In the above example, we're trying to map the characters of the ```alienWord``` 
 <!-- MAP CHARACTERS TO AN ARRAY -->
 ## Map Characters To An Array
 
-The infos I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
+The information I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
 
 ### 12a-J Example
 
@@ -1074,8 +1077,12 @@ Once all of the array indexes correlating to characters in the word have been ma
   
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[github-shield]: https://img.shields.io/github/followers/ColstonBod-oy?style=social
-[github-url]: https://github.com/ColstonBod-oy
-[twitter-shield]: https://img.shields.io/twitter/follow/OyColston?style=social
+[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-url]: https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com
+[facebook-shield]: https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white
+[facebook-url]: https://www.facebook.com/colston.bodoy/
+[insta-shield]: https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white
+[insta-url]: https://www.instagram.com/coldz.stone/
+[twitter-shield]: https://img.shields.io/twitter/url?style=for-the-badge
 [twitter-url]: https://twitter.com/OyColston
 [java-logo]: images/java-logo.png
