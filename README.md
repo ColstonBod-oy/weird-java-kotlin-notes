@@ -51,7 +51,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents (Java)</summary>
+  <summary>📄 Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -62,130 +62,132 @@
         </ul>
       </details>
     </li>
+  <ol>
+  <ol>
     <li>
       <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
       <details>
-        <summary>2a</summary>
+        <summary>1a.J</summary>
         <ul>
-          <li><a href="#2a-examples">2a Examples</a></li>
-          <li><a href="#2a-description">2a Description</a></li>
+          <li><a href="#2a-examples">1a.J Example</a></li>
+          <li><a href="#2a-description">1a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
       <details>
-        <summary>3a</summary>
+        <summary>2a.J</summary>
         <ul>
-          <li><a href="#3a-examples">3a Examples</a></li>
-          <li><a href="#3a-description">3a Description</a></li>
+          <li><a href="#3a-examples">2a.J Example</a></li>
+          <li><a href="#3a-description">2a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
       <details>
-        <summary>4a</summary>
+        <summary>3a.J</summary>
         <ul>
-          <li><a href="#4a-examples">4a Examples</a></li>
-          <li><a href="#4a-description">4a Description</a></li>
+          <li><a href="#4a-examples">3a.J Example</a></li>
+          <li><a href="#4a-description">3a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#compare-wrapper-types">Compare Wrapper Types</a>
       <details>
-        <summary>5a</summary>
+        <summary>4a.J</summary>
         <ul>
-          <li><a href="#5a-examples">5a Examples</a></li>
-          <li><a href="#5a-description">5a Description</a></li>
+          <li><a href="#5a-examples">4a.J Example</a></li>
+          <li><a href="#5a-description">4a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#nest-methods">Nest Methods</a>
       <details>
-        <summary>6a</summary>
+        <summary>5a.J</summary>
         <ul>
-          <li><a href="#6a-examples">6a Examples</a></li>
-          <li><a href="#6a-description">6a Description</a></li>
+          <li><a href="#6a-examples">5a.J Example</a></li>
+          <li><a href="#6a-description">5a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#map-two-arrays-to-a-hashmap">Map Two Arrays To A HashMap</a>
       <details>
-        <summary>7a</summary>
+        <summary>6a.J</summary>
         <ul>
-          <li><a href="#7a-examples">7a Examples</a></li>
-          <li><a href="#7a-description">7a Description</a></li>
+          <li><a href="#7a-examples">6a.J Example</a></li>
+          <li><a href="#7a-description">6a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#store-key-value-pairs-in-a-list">Store Key-Value Pairs In A List</a>
       <details>
-        <summary>8a</summary>
+        <summary>7a.J</summary>
         <ul>
-          <li><a href="#8a-examples">8a Examples</a></li>
-          <li><a href="#8a-description">8a Description</a></li>
+          <li><a href="#8a-examples">7a.J Example</a></li>
+          <li><a href="#8a-description">7a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
       <details>
-        <summary>9a</summary>
+        <summary>8a.J</summary>
         <ul>
-          <li><a href="#9a-examples">9a Examples</a></li>
-          <li><a href="#9a-description">9a Description</a></li>
+          <li><a href="#9a-examples">8a.J Example</a></li>
+          <li><a href="#9a-description">8a.J Description</a></li>
         </ul>
       </details>
       <details>
-        <summary>9b</summary>
+        <summary>8b.J</summary>
         <ul>
-          <li><a href="#9b-examples">9b Examples</a></li>
-          <li><a href="#9b-description">9b Description</a></li>
+          <li><a href="#9b-examples">8b.J Example</a></li>
+          <li><a href="#9b-description">8b.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#create-a-hashset-of-arrays">Create A HashSet Of Arrays</a>
       <details>
-        <summary>10a</summary>
+        <summary>9a.J</summary>
         <ul>
-          <li><a href="#10a-examples">10a Examples</a></li>
-          <li><a href="#10a-description">10a Description</a></li>
+          <li><a href="#10a-examples">9a.J Example</a></li>
+          <li><a href="#10a-description">9a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#lexicographically-sort-a-2d-list">Lexicographically Sort A 2D List</a>
       <details>
-        <summary>11a</summary>
+        <summary>10a.J</summary>
         <ul>
-          <li><a href="#11a-examples">11a Examples</a></li>
-          <li><a href="#11a-description">11a Description</a></li>
+          <li><a href="#11a-examples">10a.J Example</a></li>
+          <li><a href="#11a-description">10a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#iterate-through-a-hashmap">Iterate Through A HashMap</a>
       <details>
-        <summary>12a</summary>
+        <summary>11a.J</summary>
         <ul>
-          <li><a href="#12a-examples">12a Examples</a></li>
-          <li><a href="#12a-description">12a Description</a></li>
+          <li><a href="#12a-examples">11a.J Example</a></li>
+          <li><a href="#12a-description">11a.J Description</a></li>
         </ul>
       </details>
     </li>
     <li>
       <a href="#map-characters-to-an-array">Map Characters To An Array</a>
       <details>
-        <summary>13a</summary>
+        <summary>12a.J</summary>
         <ul>
-          <li><a href="#13a-examples">13a Examples</a></li>
-          <li><a href="#13a-description">13a Description</a></li>
+          <li><a href="#13a-examples">12a.J Example</a></li>
+          <li><a href="#13a-description">12a.J Description</a></li>
         </ul>
       </details>
     </li>
@@ -201,7 +203,7 @@
 
 Hello! My name is Colston D. Bod-oy, I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.  
   
-I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning it on a deeper level. I hope you'll find these notes useful! 😎.
+I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
 
 
 ### README Template
@@ -219,7 +221,7 @@ Here's where I got this template, btw. Also,  don't forget to follow me on my s
 
 I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
-### 2a Examples
+### 1a.J Example
 
   ```java
   import java.util.Arrays;
@@ -267,7 +269,7 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
   }
   ```
 
-### 2a Description
+### 1a.J Description
 
 We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
   
@@ -282,7 +284,7 @@ We also used ```Integer.parseInt()``` on the last example to return an ```int```
 
 I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly) which swaps the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
-### 3a Examples
+### 2a.J Example
 
   ```java
   import java.util.Map;
@@ -329,7 +331,7 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4
   }
   ```
 
-### 3a Description
+### 2a.J Description
 
 First, the set view of the mappings was obtained to create a new stream then we apply the ```Stream.collect()``` method which performs a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
@@ -348,7 +350,7 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 
 The info I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/) which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
-### 4a Examples
+### 3a.J Example
 
   ```java
   import java.util.List;
@@ -375,7 +377,7 @@ The info I used for these examples can be found on [HowToDoInJava](https://howto
   }
   ```
   
-### 4a Description
+### 3a.J Description
 
 The array was first converted to a stream and since it's a stream of primitives we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
@@ -388,7 +390,7 @@ The array was first converted to a stream and since it's a stream of primitives 
 
 The info I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal) which shows why the ```Integer``` objects are not equal.
 
-### 5a Examples
+### 4a.J Example
 
   ```java
   import java.util.HashMap;
@@ -424,7 +426,7 @@ The info I used for these examples can be found on [Stack Overflow](https://stac
   }
   ```
   
-### 5a Description
+### 4a.J Description
 
 When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, using ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer``` use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object as shown in the last example.  
 
@@ -437,7 +439,7 @@ When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```
 
 The info I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/) which shows the different ways we could nest methods in Java.
 
-### 6a Examples
+### 5a.J Example
 
   ```java
   class Main {
@@ -474,7 +476,7 @@ The info I used for these examples can be found on [GeeksforGeeks](https://www.g
   }
   ```
   
-### 6a Description
+### 5a.J Description
 
 Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
 
@@ -487,7 +489,7 @@ Java does not support nested methods, so we used an anonymous subclass from the 
 
 The info I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order) which allows sorting of the map as well.
 
-### 7a Examples
+### 6a.J Example
 
   ```java
   import java.util.Map;
@@ -560,7 +562,7 @@ The info I used for these examples can be found on [Stack Overflow Link 1](https
   }
   ```
   
-### 7a Description
+### 6a.J Description
 
 To use the ```Collectors.toMap()``` method we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter which was shown in the second example.  
   
@@ -577,7 +579,7 @@ We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and use it as th
 
 The info I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/) which shows how to implement a ```Pair``` class.
 
-### 8a Examples
+### 7a.J Example
 
   ```java
   import java.util.List;
@@ -661,7 +663,7 @@ The info I used for these examples can be found on [Techie Delight](https://www.
   }
   ```
   
-### 8a Description
+### 7a.J Description
   
 Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key as shown in the examples.    
 
@@ -674,7 +676,7 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
   
 The info I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java) which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/). 
 
-### 9a Examples
+### 8a.J Example
   
   ```java
   import java.util.Arrays;
@@ -744,7 +746,7 @@ The info I used for these first examples can be found on [GitHub](https://github
   }
   ```
 
-### 9a Description
+### 8a.J Description
 
 The examples above return the k closest points to the origin of an X-Y plane (0, 0) from a given set of coordinates. To solve the problem, we'll use a heap binary tree data structure, which is implemented as the ```PriorityQueue``` in Java. We could then pass a ```Comparator``` when instantiating to give rules on how we would want to order the elements that would be stored inside the ```PriorityQueue```.
         
@@ -758,7 +760,7 @@ We could save more space by using a max heap instead of a min heap, as shown in 
 
 The info I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow) which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
-### 9b Examples
+### 8b.J Example
 
   ```java
   import java.util.PriorityQueue;
@@ -852,7 +854,7 @@ The info I used for the next examples can be found on [Stack Overflow Link 1](ht
   }
   ```
   
-### 9b Description
+### 8b.J Description
   
 The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.  
   
@@ -869,7 +871,7 @@ This method of creating a comparator for the ```PriorityQueue``` is preferred ov
 
 The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) which shows different ways on how to implement a ```HashSet``` containing arrays/collections as elements.
 
-### 10a Examples
+### 9a.J Example
 
   ```java
   import java.util.List;
@@ -899,7 +901,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   }
   ```
   
-### 10a Description
+### 9a.J Description
   
 In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since its storing ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation which uses a custom class).
 
@@ -912,7 +914,7 @@ In the above example, we're creating two ```HashSet``` objects, one of which acc
 
 The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array) which shows how to sort a 2d array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
 
-### 11a Examples
+### 10a.J Example
 
   ```java
   import java.util.List;
@@ -956,7 +958,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   }
   ```
   
-### 11a Description
+### 10a.J Description
   
 In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
 
@@ -969,7 +971,7 @@ In the above example, we're trying to sort a 2D ```List``` of tickets that conta
 
 The info I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
 
-### 12a Examples
+### 11a.J Example
 
   ```java
   import java.util.Map;
@@ -1023,7 +1025,7 @@ The info I used for this example can be found on [Stack Overflow](https://stacko
   }
   ```
   
-### 12a Description
+### 11a.J Description
   
 In the above example, we're trying to map the characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
 
@@ -1036,7 +1038,7 @@ In the above example, we're trying to map the characters of the ```alienWord``` 
 
 The infos I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
 
-### 13a Examples
+### 12a.J Example
 
   ```java
   class Main {
@@ -1058,7 +1060,7 @@ The infos I used for this example can be found on [GeeksforGeeks](https://www.ge
   }
   ```
   
-### 13a Description
+### 12a.J Description
   
 In the above example, we're trying to map the characters of the ```alienWord``` variable to an array by converting them to integers, which would serve as their index on the array. We can do this by subtracting their ```ASCII``` numeric value from that of the character ```'a'```, so ```'a' - 'a'``` would yield a result of zero, meaning that the ```boolean``` value that represents whether or not that character exists in the ```alienWord``` variable would be stored at that index in the array (note that our array has a fixed size of ```26``` since there are only ```26``` letters in the English alphabet), which has a default value of ```false``` and would be set to ```true``` as the resulting index was accessed in the array.
                                                
