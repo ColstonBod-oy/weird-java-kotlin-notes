@@ -19,7 +19,6 @@
 -->
 [![GitHub][github-shield]][github-url]&ensp;
 [![Twitter][twitter-shield]][twitter-url]&ensp;
-[![Reddit][reddit-shield]][reddit-url]&ensp;
 
 
 
@@ -64,137 +63,137 @@
     </li>
   </ol>
   <details>
-  <summary>Java</summary>
-  <ol>
-    <li>
-      <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
-      <details>
-        <summary>1a.J</summary>
-        <ul>
-          <li><a href="#2a-examples">1a.J Example</a></li>
-          <li><a href="#2a-description">1a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
-      <details>
-        <summary>2a.J</summary>
-        <ul>
-          <li><a href="#3a-examples">2a.J Example</a></li>
-          <li><a href="#3a-description">2a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
-      <details>
-        <summary>3a.J</summary>
-        <ul>
-          <li><a href="#4a-examples">3a.J Example</a></li>
-          <li><a href="#4a-description">3a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#compare-wrapper-types">Compare Wrapper Types</a>
-      <details>
-        <summary>4a.J</summary>
-        <ul>
-          <li><a href="#5a-examples">4a.J Example</a></li>
-          <li><a href="#5a-description">4a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#nest-methods">Nest Methods</a>
-      <details>
-        <summary>5a.J</summary>
-        <ul>
-          <li><a href="#6a-examples">5a.J Example</a></li>
-          <li><a href="#6a-description">5a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#map-two-arrays-to-a-hashmap">Map Two Arrays To A HashMap</a>
-      <details>
-        <summary>6a.J</summary>
-        <ul>
-          <li><a href="#7a-examples">6a.J Example</a></li>
-          <li><a href="#7a-description">6a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#store-key-value-pairs-in-a-list">Store Key-Value Pairs In A List</a>
-      <details>
-        <summary>7a.J</summary>
-        <ul>
-          <li><a href="#8a-examples">7a.J Example</a></li>
-          <li><a href="#8a-description">7a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
-      <details>
-        <summary>8a.J</summary>
-        <ul>
-          <li><a href="#9a-examples">8a.J Example</a></li>
-          <li><a href="#9a-description">8a.J Description</a></li>
-        </ul>
-      </details>
-      <details>
-        <summary>8b.J</summary>
-        <ul>
-          <li><a href="#9b-examples">8b.J Example</a></li>
-          <li><a href="#9b-description">8b.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#create-a-hashset-of-arrays">Create A HashSet Of Arrays</a>
-      <details>
-        <summary>9a.J</summary>
-        <ul>
-          <li><a href="#10a-examples">9a.J Example</a></li>
-          <li><a href="#10a-description">9a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#lexicographically-sort-a-2d-list">Lexicographically Sort A 2D List</a>
-      <details>
-        <summary>10a.J</summary>
-        <ul>
-          <li><a href="#11a-examples">10a.J Example</a></li>
-          <li><a href="#11a-description">10a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#iterate-through-a-hashmap">Iterate Through A HashMap</a>
-      <details>
-        <summary>11a.J</summary>
-        <ul>
-          <li><a href="#12a-examples">11a.J Example</a></li>
-          <li><a href="#12a-description">11a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-    <li>
-      <a href="#map-characters-to-an-array">Map Characters To An Array</a>
-      <details>
-        <summary>12a.J</summary>
-        <ul>
-          <li><a href="#13a-examples">12a.J Example</a></li>
-          <li><a href="#13a-description">12a.J Description</a></li>
-        </ul>
-      </details>
-    </li>
-  </ol>
-</details>
+    <summary>Java</summary>
+    <ol>
+      <li>
+        <a href="#get-an-array-of-maps-keys">Get An Array Of Map's Keys</a>
+        <details>
+          <summary>1a.J</summary>
+          <ul>
+            <li><a href="#2a-examples">1a.J Example</a></li>
+            <li><a href="#2a-description">1a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#swap-keys-and-values-in-a-map">Swap Keys And Values In A Map</a>
+        <details>
+          <summary>2a.J</summary>
+          <ul>
+            <li><a href="#3a-examples">2a.J Example</a></li>
+            <li><a href="#3a-description">2a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#convert-array-of-primitives-to-a-list-or-set">Convert Array Of Primitives To A List Or Set</a>
+        <details>
+          <summary>3a.J</summary>
+          <ul>
+            <li><a href="#4a-examples">3a.J Example</a></li>
+            <li><a href="#4a-description">3a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#compare-wrapper-types">Compare Wrapper Types</a>
+        <details>
+          <summary>4a.J</summary>
+          <ul>
+            <li><a href="#5a-examples">4a.J Example</a></li>
+            <li><a href="#5a-description">4a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#nest-methods">Nest Methods</a>
+        <details>
+          <summary>5a.J</summary>
+          <ul>
+            <li><a href="#6a-examples">5a.J Example</a></li>
+            <li><a href="#6a-description">5a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#map-two-arrays-to-a-hashmap">Map Two Arrays To A HashMap</a>
+        <details>
+          <summary>6a.J</summary>
+          <ul>
+            <li><a href="#7a-examples">6a.J Example</a></li>
+            <li><a href="#7a-description">6a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#store-key-value-pairs-in-a-list">Store Key-Value Pairs In A List</a>
+        <details>
+          <summary>7a.J</summary>
+          <ul>
+            <li><a href="#8a-examples">7a.J Example</a></li>
+            <li><a href="#8a-description">7a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#create-a-node-priority-queue-with-comparator">Create A Node Priority Queue With Comparator</a>
+        <details>
+          <summary>8a.J</summary>
+          <ul>
+            <li><a href="#9a-examples">8a.J Example</a></li>
+            <li><a href="#9a-description">8a.J Description</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>8b.J</summary>
+          <ul>
+            <li><a href="#9b-examples">8b.J Example</a></li>
+            <li><a href="#9b-description">8b.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#create-a-hashset-of-arrays">Create A HashSet Of Arrays</a>
+        <details>
+          <summary>9a.J</summary>
+          <ul>
+            <li><a href="#10a-examples">9a.J Example</a></li>
+            <li><a href="#10a-description">9a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#lexicographically-sort-a-2d-list">Lexicographically Sort A 2D List</a>
+        <details>
+          <summary>10a.J</summary>
+          <ul>
+            <li><a href="#11a-examples">10a.J Example</a></li>
+            <li><a href="#11a-description">10a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#iterate-through-a-hashmap">Iterate Through A HashMap</a>
+        <details>
+          <summary>11a.J</summary>
+          <ul>
+            <li><a href="#12a-examples">11a.J Example</a></li>
+            <li><a href="#12a-description">11a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a href="#map-characters-to-an-array">Map Characters To An Array</a>
+        <details>
+          <summary>12a.J</summary>
+          <ul>
+            <li><a href="#13a-examples">12a.J Example</a></li>
+            <li><a href="#13a-description">12a.J Description</a></li>
+          </ul>
+        </details>
+      </li>
+    </ol>
+  </details>
 </details>
 
 
@@ -1079,6 +1078,4 @@ Once all of the array indexes correlating to characters in the word have been ma
 [github-url]: https://github.com/ColstonBod-oy
 [twitter-shield]: https://img.shields.io/twitter/follow/OyColston?style=social
 [twitter-url]: https://twitter.com/OyColston
-[reddit-shield]: https://img.shields.io/reddit/user-karma/combined/Coldz-Stone?style=social
-[reddit-url]: https://www.reddit.com/user/Coldz-Stone
 [java-logo]: images/java-logo.png
