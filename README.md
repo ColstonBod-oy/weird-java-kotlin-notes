@@ -51,7 +51,8 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>📔 Table of Contents</summary>
-  
+  <ol>
+    <li>
       <a href="#about-the-project">📄 About The Project</a>
       <details>
         <summary>1a</summary>
@@ -59,8 +60,8 @@
           <li><a href="#readme-template">📣README Template</a></li>
         </ul>
       </details>
-    
-
+    </li>
+  </ol>
   <details>
     <summary>🔖 Java</summary>
     <ol>
