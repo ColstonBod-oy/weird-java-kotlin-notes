@@ -66,7 +66,7 @@
     <summary>🔖 Java</summary>
     <ol>
       <li>
-        <a href="#📑-get-an-array-of-maps-keys">📄 Get An Array Of Map's Keys</a>
+        <a href="#get-an-array-of-maps-keys">📄 Get An Array Of Map's Keys</a>
         <details>
           <summary>1a-J</summary>
           <ul>
@@ -219,7 +219,7 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
 
 
 <!-- GET AN ARRAY OF MAPS KEYS -->
-## 📑 Get An Array Of Map's Keys 
+📑## Get An Array Of Map's Keys 
 
 I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
