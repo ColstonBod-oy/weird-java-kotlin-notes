@@ -35,16 +35,16 @@
     <a href="https://docs.oracle.com/en/java/"><strong>Explore the docs »</strong></a>&nbsp;
     <a href="https://kotlinlang.org/docs/home.html"><strong>Explore the docs (Kotlin) »</strong></a>
     <br/>
-    <br/>
     <a href="https://java-8-tips.readthedocs.io/en/stable/quickintro.html">Stream API Docs</a>
     ·
     <a href="https://philvarner.github.io/pages/modern-java.html">Java 8 Cheat Sheet</a>
     ·
     <a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-cheat-sheet.html">Stream API Cheat Sheet</a>
     <br/>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-    <a href="https://www.facebook.com/colston.bodoy/"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white"/></a>
-    <a href="https://www.instagram.com/coldz.stone/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
+    <br/>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>&ensp;
+    <a href="https://www.facebook.com/colston.bodoy/"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white"/></a>&ensp;
+    <a href="https://www.instagram.com/coldz.stone/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"/></a>&ensp;
     <a href="https://twitter.com/OyColston"><img alt="Twitter" src="https://img.shields.io/badge/follow-%40OyColston-1DA1F2?logo=twitter&style=for-the-badge"/></a>
   </p>
 </div>
