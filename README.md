@@ -200,8 +200,7 @@
 
 <!-- ABOUT THE PROJECT -->
 <!-- About The Project -->
-## About The Project  
-## 📑
+## 📑 About The Project  
 
 ![Banner][java-logo]
 
