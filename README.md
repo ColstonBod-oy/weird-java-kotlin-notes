@@ -51,7 +51,7 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>📔 Table of Contents</summary>
-  <ul>
+  
     <li>
       <a href="#about-the-project">📄 About The Project</a>
       <details>
@@ -61,7 +61,7 @@
         </ul>
       </details>
     </li>
-  </ul>
+
   <details>
     <summary>🔖 Java</summary>
     <ol>
