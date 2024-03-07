@@ -207,9 +207,9 @@
 
 ![Banner][java-logo]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
+&emsp;&emsp;Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
   
-&nbsp;&nbsp;&nbsp;&nbsp;I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
+&emsp;&emsp;I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
 
 
 ### README Template
@@ -225,7 +225,7 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
 <!-- GET AN ARRAY OF MAPS KEYS -->
 ## Get An Array Of Map's Keys  
 
-I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys), which converts a set of map keys into an array.
+&emsp;&emsp;I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys), which converts a set of map keys into an array.
 
 ### 1a-J Example  
 
@@ -277,9 +277,9 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
 
 ### 1a-J Description  
 
-We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we created a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
+&emsp;&emsp;We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we created a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
   
-We also used ```Integer.parseInt()``` on the last example to return an ```int``` from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
+&emsp;&emsp;We also used ```Integer.parseInt()``` on the last example to return an ```int``` from a given string representation and applied ```Arrays.copyOfRange()``` to it so that the resulting array would only contain the first 3 keys of our map. For all our examples, we used the ```toArray()``` method at the end to get an array of all the elements of the ```IntStream```.
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -288,7 +288,7 @@ We also used ```Integer.parseInt()``` on the last example to return an ```int```
 <!-- SWAP KEYS AND VALUES IN A MAP -->
 ## Swap Keys And Values In A Map 
 
-I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly), which swap the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
+&emsp;&emsp;I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4436999/how-to-swap-keys-and-values-in-a-map-elegantly), which swap the keys and values contained in a map. I also got additional information about the ```Collectors.groupingBy()``` method on [Stack Abuse](https://stackabuse.com/guide-to-java-8-collectors-groupingby/).
 
 ### 2a-J Example
 
@@ -339,13 +339,13 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4
 
 ### 2a-J Description
 
-First, the set view of the mappings was obtained to create a new stream, and then we applied the ```Stream.collect()``` method, which performed a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
+&emsp;&emsp;First, the set view of the mappings was obtained to create a new stream, and then we applied the ```Stream.collect()``` method, which performed a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
-We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and stores the end result in a map. The ```Collector``` makes a ```Map<K, List<T>>```, whose keys are the values resulting from applying the classification function to the input elements. Each value of those keys is a ```List``` containing the input elements, which map to the associated key.  
+&emsp;&emsp;We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and stores the end result in a map. The ```Collector``` makes a ```Map<K, List<T>>```, whose keys are the values resulting from applying the classification function to the input elements. Each value of those keys is a ```List``` containing the input elements, which map to the associated key.  
   
-In the first example, we used ```Entry.getValue()``` as our classification function and ```Collectors.mapping()``` to apply a reduction operation to the values associated with a given key. Using ```Entry.getKey()``` as our mapping function, we're able to reduce our data to only use keys as values. Finally, ```Collectors.toList()``` was used as the downstream collector to accept the mapped values.  
+&emsp;&emsp;In the first example, we used ```Entry.getValue()``` as our classification function and ```Collectors.mapping()``` to apply a reduction operation to the values associated with a given key. Using ```Entry.getKey()``` as our mapping function, we're able to reduce our data to only use keys as values. Finally, ```Collectors.toList()``` was used as the downstream collector to accept the mapped values.  
   
-By doing all of the operations, we ended up with a ```Map``` instance that has the swapped key-value pairs from the initial map. Notice how we have duplicate values from our previous map, so when they're converted to keys, each of their previously associated keys is added inside a ```List```. The second example was pretty much the same as the first; the only difference is that we've added a supplier method, ```TreeMap::new```, which specifies the exact implementation of ```Map``` we want to use. This time it uses a ```TreeMap``` implementation, so the keys for our new map are automatically sorted.     
+&emsp;&emsp;By doing all of the operations, we ended up with a ```Map``` instance that has the swapped key-value pairs from the initial map. Notice how we have duplicate values from our previous map, so when they're converted to keys, each of their previously associated keys is added inside a ```List```. The second example was pretty much the same as the first; the only difference is that we've added a supplier method, ```TreeMap::new```, which specifies the exact implementation of ```Map``` we want to use. This time it uses a ```TreeMap``` implementation, so the keys for our new map are automatically sorted.     
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -354,7 +354,7 @@ By doing all of the operations, we ended up with a ```Map``` instance that has t
 <!-- CONVERT ARRAY OF PRIMITIVES TO A LIST OR SET -->
 ## Convert Array Of Primitives To A List Or Set
 
-The information I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/), which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
+&emsp;&emsp;The information I used for these examples can be found on [HowToDoInJava](https://howtodoinjava.com/java8/java8-boxed-intstream/), which allows me to create a ```List``` or a ```Set``` from a stream of primitives.
 
 ### 3a-J Example
 
@@ -385,7 +385,7 @@ The information I used for these examples can be found on [HowToDoInJava](https:
   
 ### 3a-J Description
 
-The array was first converted to a stream, and since it's a stream of primitives, we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
+&emsp;&emsp;The array was first converted to a stream, and since it's a stream of primitives, we also needed to use the ```boxed()``` method to return a stream consisting of the elements of the given stream, each boxed to an object of the corresponding wrapper class, ```Integer``` in this case. Then we just apply the ```Stream.collect()``` method to create a ```List``` or use the result inside a constructor like the one from ```HashSet```.     
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
@@ -394,7 +394,7 @@ The array was first converted to a stream, and since it's a stream of primitives
 <!-- COMPARE WRAPPER TYPES -->
 ## Compare Wrapper Types
 
-The information I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal), which shows why the ```Integer``` objects are not equal.
+&emsp;&emsp;The information I used for these examples can be found on [Stack Overflow](https://stackoverflow.com/questions/4428774/why-java-does-not-see-that-integers-are-equal), which shows why the ```Integer``` objects are not equal.
 
 ### 4a-J Example
 
@@ -434,7 +434,7 @@ The information I used for these examples can be found on [Stack Overflow](https
   
 ### 4a-J Description
 
-When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, use ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer```, use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object, as shown in the last example.  
+&emsp;&emsp;When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```, use ```==``` or ```!=```, we're comparing them as references, not as values. The first example produces a value of ```true``` because in Java, numeric values within the range of -128 to 127 are cached, so they would have an identical memory location. For ```Integer```, use ```intValue()```, ```compareTo()```, or ```equals()``` when making comparisons. If using wrapper classes like ```Integer``` can't be avoided, we can use the ```Integer.valueOf()``` method, which guarantees, as per the Java specs, the reuse of the first 256 ```Integer``` objects from -128 to 127, while ```new Integer()``` forces the creation of a new object, as shown in the last example.  
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -443,7 +443,7 @@ When comparing wrapper types such as ```Integer```, ```Long```, or ```Boolean```
 <!-- NEST METHODS -->
 ## Nest Methods
 
-The information I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/), which shows the different ways we could nest methods in Java.
+&emsp;&emsp;The information I used for these examples can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/method-within-method-in-java/), which shows the different ways we could nest methods in Java.
 
 ### 5a-J Example
 
@@ -484,7 +484,7 @@ The information I used for these examples can be found on [GeeksforGeeks](https:
   
 ### 5a-J Description
 
-Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
+&emsp;&emsp;Java does not support nested methods, so we used an anonymous subclass from the example above to achieve a similar structure. An anonymous class is an inner class without a name that usually extends subclasses or implements interfaces, and only a single object can be created from it.
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -493,7 +493,7 @@ Java does not support nested methods, so we used an anonymous subclass from the 
 <!-- MAP TWO ARRAYS TO A HASHMAP -->
 ## Map Two Arrays To A HashMap
 
-The information I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order), which allow sorting of the map as well.
+&emsp;&emsp;The information I used for these examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/30339679/how-to-map-two-arrays-to-one-hashmap-in-java) and [Stack Overflow Link 2](https://stackoverflow.com/questions/58998826/java-stream-collect-to-treemap-in-reverse-order), which allow sorting of the map as well.
 
 ### 6a-J Example
 
@@ -570,11 +570,11 @@ The information I used for these examples can be found on [Stack Overflow Link 1
   
 ### 6a-J Description
 
-To use the ```Collectors.toMap()``` method, we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter, which was shown in the second example.  
+&emsp;&emsp;To use the ```Collectors.toMap()``` method, we have to box the ```int``` primitives into ```Integer``` objects first. To preserve the element order, use the extended version of ```Collectors.toMap()``` together with the ```LinkedHashMap::new``` function as the argument for the ```mapSupplier``` parameter, which was shown in the second example.  
   
-For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function for this example and the fifth example to maintain the sorted values when collecting them into a map.  
+&emsp;&emsp;For the third example, we used the ```Comparator.comparing``` method to compare values from the positions array and sort them in ascending order; note how we also used the ```LinkedHashMap::new``` function for this example and the fifth example to maintain the sorted values when collecting them into a map.  
   
-We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and used it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the position array. Finally, we used the speed array as the basis for the sorting of the fifth example.      
+&emsp;&emsp;We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and used it as the ```mapSupplier``` for the fourth example to get a hashmap that has a descending order based on the values of the position array. Finally, we used the speed array as the basis for the sorting of the fifth example.      
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -583,7 +583,7 @@ We created a ```TreeMap``` with a ```Comparator.reverseOrder``` and used it as t
 <!-- STORE KEY-VALUE PAIRS IN A LIST -->
 ## Store Key-Value Pairs In A List
 
-The information I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/), which shows how to implement a ```Pair``` class.
+&emsp;&emsp;The information I used for these examples can be found on [Techie Delight](https://www.techiedelight.com/implement-pair-class-java/), which shows how to implement a ```Pair``` class.
 
 ### 7a-J Example
 
@@ -671,7 +671,7 @@ The information I used for these examples can be found on [Techie Delight](https
   
 ### 7a-J Description
   
-Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key, as shown in the examples.    
+&emsp;&emsp;Java's ```List``` does not support key-value pairs, so we have to create a ```Pair``` custom class to be able to store them as elements. We can do this by using generics, so we can use different kinds of data for our keys and values. The created ```List``` would then be used by our ```HashMap``` to store values while also assigning its own key, as shown in the examples.    
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -680,7 +680,7 @@ Java's ```List``` does not support key-value pairs, so we have to create a ```Pa
 <!-- CREATE A NODE PRIORITY QUEUE WITH COMPARATOR -->
 ## Create A Node Priority Queue With Comparator
 
-The information I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java), which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/).
+&emsp;&emsp;The information I used for these first examples can be found on [GitHub](https://github.com/neetcode-gh/leetcode/blob/main/java/0973-k-closest-points-to-origin.java), which is the Java solution for the LeetCode problem [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/).
 
 ### 8a-J Example
   
@@ -754,17 +754,17 @@ The information I used for these first examples can be found on [GitHub](https:/
 
 ### 8a-J Description
 
-The examples above return the k closest points to the origin of an X-Y plane (0, 0) from a given set of coordinates. To solve the problem, we'll use a heap binary tree data structure, which is implemented as the ```PriorityQueue``` in Java. We could then pass a ```Comparator``` when instantiating to give rules on how we would want to order the elements that would be stored inside the ```PriorityQueue```.
+&emsp;&emsp;The examples above return the k closest points to the origin of an X-Y plane (0, 0) from a given set of coordinates. To solve the problem, we'll use a heap binary tree data structure, which is implemented as the ```PriorityQueue``` in Java. We could then pass a ```Comparator``` when instantiating to give rules on how we would want to order the elements that would be stored inside the ```PriorityQueue```.
         
-Instead of creating a new ```Comparator``` object, we could just use Java 8's lambda expression feature to declare how our comparisons would work. We also used the Euclidean formula to calculate the distance of the points from the origin (note that we didn't apply the square root to the formula because it wouldn't affect our desired results). In the first example, we created what's called a min heap because the points would be ordered in an ascending order based on the results of the formula. We then continuously popped the head of the ```PriorityQueue``` and assigned its values to the indexes of our ```res``` 2D array until we had enough k elements, which we would then finally return as our result.  
+&emsp;&emsp;Instead of creating a new ```Comparator``` object, we could just use Java 8's lambda expression feature to declare how our comparisons would work. We also used the Euclidean formula to calculate the distance of the points from the origin (note that we didn't apply the square root to the formula because it wouldn't affect our desired results). In the first example, we created what's called a min heap because the points would be ordered in an ascending order based on the results of the formula. We then continuously popped the head of the ```PriorityQueue``` and assigned its values to the indexes of our ```res``` 2D array until we had enough k elements, which we would then finally return as our result.  
         
-We could save more space by using a max heap instead of a min heap, as shown in the second example; we were able to convert the ```Comparator``` for the max heap by flipping the conditions where we have the second array in our lambda expression as the first argument in our ```Double.compare()``` method (note that we used ```Double``` instead of ```Integer``` because the ```Math.pow()``` method returns a ```double``` value).
+&emsp;&emsp;We could save more space by using a max heap instead of a min heap, as shown in the second example; we were able to convert the ```Comparator``` for the max heap by flipping the conditions where we have the second array in our lambda expression as the first argument in our ```Double.compare()``` method (note that we used ```Double``` instead of ```Integer``` because the ```Math.pow()``` method returns a ```double``` value).
         
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>  
   
   
 
-The information I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow), which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers, thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
+&emsp;&emsp;The information I used for the next examples can be found on [Stack Overflow Link 1](https://stackoverflow.com/questions/45167365/java-listinteger-sort-comparator-and-overflow), which shows why using the commented line (see code below) would cause an overflow when trying to get the difference of two large arbitrary signed integers, thus causing unexpected behaviors. [Stack Overflow Link 2](https://stackoverflow.com/questions/26963158/inserting-nodes-into-a-priority-queue-java) shows how to implement the ```Comparable``` interface to avoid such problems.
 
 ### 8b-J Example
 
@@ -862,11 +862,11 @@ The information I used for the next examples can be found on [Stack Overflow Lin
   
 ### 8b-J Description
   
-The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.  
+&emsp;&emsp;The example above merges sorted list nodes together, where List Nodes 1 and 2 have three nodes while List Node 3 only has a head and a tail. We can implement the code in two ways, but the commented line does not work in general because there's a chance that it would cause an overflow when the variable ```a``` in the lambda expression is a large positive number while the ```b``` variable is a large negative number, resulting in having to add the two large numbers together, which the ```int``` data type might not be able to hold, and the answer would instead be a negative integer instead of a positive one, giving the opposite of the intended behavior.  
   
-To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
+&emsp;&emsp;To solve the previous problem, we must implement the ```Comparable``` interface on our ```ListNode``` class, which allows us to implement our own ```compareTo``` function without having to subtract two integers to get a positive or negative result.
 
-This method of creating a comparator for the ```PriorityQueue``` is preferred over the examples in 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
+&emsp;&emsp;This method of creating a comparator for the ```PriorityQueue``` is preferred over the examples in 9a when the elements used are not ```Comparable``` out of the box (e.g., custom classes).
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
@@ -875,7 +875,7 @@ This method of creating a comparator for the ```PriorityQueue``` is preferred ov
 <!-- CREATE A HASHSET OF ARRAYS -->
 ## Create A HashSet Of Arrays
 
-The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint), which shows different ways to implement a ```HashSet``` containing arrays or collections as elements.
+&emsp;&emsp;The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint), which shows different ways to implement a ```HashSet``` containing arrays or collections as elements.
 
 ### 9a-J Example
 
@@ -909,7 +909,7 @@ The information I used for this example can be found on [Stack Overflow](https:/
   
 ### 9a-J Description
   
-In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since it stores ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation that uses a custom class).
+&emsp;&emsp;In the above example, we're creating two ```HashSet``` objects, one of which accepts ```int[]``` elements while the other accepts ```List<Integer>```. Since ```int[]``` is not a primitive data type, when creating a new array from the ```x``` and ```y``` variables and then invoking the ```contains``` function of ```set1```, the default behavior of the function would be to compare the reference of the objects instead of their contents, which is why we're getting a ```false``` result. To fix this, we can use a ```List``` instead of an array because it's an object that implements the ```equals()``` method based on its contents (note that ```set2``` uses more space since it stores ```Integer``` objects; check [this link](https://stackoverflow.com/questions/65454683/check-if-an-array-exists-in-a-hashsetint) for a better implementation that uses a custom class).
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
 
@@ -918,7 +918,7 @@ In the above example, we're creating two ```HashSet``` objects, one of which acc
 <!-- LEXICOGRAPHICALLY SORT A 2D LIST -->
 ## Lexicographically Sort A 2D List
 
-The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array), which shows how to sort a 2D array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
+&emsp;&emsp;The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/15452429/java-arrays-sort-2d-array), which shows how to sort a 2D array that has two elements per array lexicographically using Java 8's lambda function to create a ```Comparator```.
 
 ### 10a-J Example
 
@@ -966,7 +966,7 @@ The information I used for this example can be found on [Stack Overflow](https:/
   
 ### 10a-J Description
   
-In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
+&emsp;&emsp;In the above example, we're trying to sort a 2D ```List``` of tickets that contains the abbreviations of states for the source location and destination pairs. We'll sort the tickets in lexicographical order based on their source location, and if they're exactly the same, their destination will be used instead. We used the ```Collections.sort()``` method to sort the ```List``` of tickets and provided it with a ```Comparator``` in the form of a lambda expression that has the logic that allows us to compare the second elements of the ticket lists if their first elements are the same.
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
@@ -975,7 +975,7 @@ In the above example, we're trying to sort a 2D ```List``` of tickets that conta
 <!-- ITERATE THROUGH A HASHMAP -->
 ## Iterate Through A HashMap
 
-The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
+&emsp;&emsp;The information I used for this example can be found on [Stack Overflow](https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap), which shows different ways to iterate through the elements of a ```HashMap```.
 
 ### 11a-J Example
 
@@ -1033,7 +1033,7 @@ The information I used for this example can be found on [Stack Overflow](https:/
   
 ### 11a-J Description
   
-In the above example, we're trying to map the characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
+&emsp;&emsp;In the above example, we're trying to map the characters of the ```alienWord``` variable to its substrings and print them out as the contents of a ```HashMap```. We can do this by using the ```entrySet()``` method of our ```HashMap```, which returns a ```Set``` view of the mappings that we can iterate over, as shown in the first example, while the second example shows how we can iterate only in the keys by using the ```keySet()``` method, and the last example shows how we can do the first example using Java 8's lambda function.
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
@@ -1042,7 +1042,7 @@ In the above example, we're trying to map the characters of the ```alienWord``` 
 <!-- MAP CHARACTERS TO AN ARRAY -->
 ## Map Characters To An Array
 
-The information I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
+&emsp;&emsp;The information I used for this example can be found on [GeeksforGeeks](https://www.geeksforgeeks.org/sort-string-characters/), which shows how to sort a string of characters by using the following method, and [Stack Overflow](https://stackoverflow.com/questions/17984975/convert-int-to-char-in-java), which shows how to convert an integer to a character.
 
 ### 12a-J Example
 
@@ -1068,9 +1068,9 @@ The information I used for this example can be found on [GeeksforGeeks](https://
   
 ### 12a-J Description
   
-In the above example, we're trying to map the characters of the ```alienWord``` variable to an array by converting them to integers, which would serve as their index on the array. We can do this by subtracting their ```ASCII``` numeric value from that of the character ```'a'```, so ```'a' - 'a'``` would yield a result of zero, meaning that the ```boolean``` value that represents whether or not that character exists in the ```alienWord``` variable would be stored at that index in the array (note that our array has a fixed size of ```26``` since there are only ```26``` letters in the English alphabet), which has a default value of ```false``` and would be set to ```true``` as the resulting index was accessed in the array.
+&emsp;&emsp;In the above example, we're trying to map the characters of the ```alienWord``` variable to an array by converting them to integers, which would serve as their index on the array. We can do this by subtracting their ```ASCII``` numeric value from that of the character ```'a'```, so ```'a' - 'a'``` would yield a result of zero, meaning that the ```boolean``` value that represents whether or not that character exists in the ```alienWord``` variable would be stored at that index in the array (note that our array has a fixed size of ```26``` since there are only ```26``` letters in the English alphabet), which has a default value of ```false``` and would be set to ```true``` as the resulting index was accessed in the array.
                                                
-Once all of the array indexes correlating to characters in the word have been marked ```true```, the program would convert said indexes back to their character equivalent by adding to them the ```ASCII``` numeric value of ```'0'``` and increasing the result by ```49``` to get back the ```ASCII``` numeric value of the character ```'a'``` onwards. For example, ```0 + '0'``` is equal to ```48```, and adding ```49``` to it would result in ```97```, which is the ```ASCII``` value for the character ```'a'``` (note that the resulting string printed doesn't have the exact same order as the original one since the characters are mapped to their equivalant index based on their position on the English alphabet).
+&emsp;&emsp;Once all of the array indexes correlating to characters in the word have been marked ```true```, the program would convert said indexes back to their character equivalent by adding to them the ```ASCII``` numeric value of ```'0'``` and increasing the result by ```49``` to get back the ```ASCII``` numeric value of the character ```'a'``` onwards. For example, ```0 + '0'``` is equal to ```48```, and adding ```49``` to it would result in ```97```, which is the ```ASCII``` value for the character ```'a'``` (note that the resulting string printed doesn't have the exact same order as the original one since the characters are mapped to their equivalant index based on their position on the English alphabet).
 
 <p align="right">(<a href="#top">back to top ⤴️</a>)</p>
   
