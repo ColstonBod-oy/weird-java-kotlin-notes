@@ -210,7 +210,7 @@ I created this project so I could keep track of and recall things that I didn't 
 
 ### README Template
 
-Here's where I got this template, btw. Also,  don't forget to follow me on my social media links.
+Btw, here's where I got this template. Also, don't forget to follow me on my social media links.
 
 👉 [📒](https://github.com/othneildrew/Best-README-Template)
 
