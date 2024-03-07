@@ -51,7 +51,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Table of Contents (Java)</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -199,14 +199,14 @@
 
 ![Banner][java-logo]
 
-Hello! My name is Colston D. Bod-oy, I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.  
-  
+Hello! My name is Colston D. Bod-oy, I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.  
+  
 I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning it on a deeper level. I hope you'll find these notes useful! 😎.
 
 
 ### README Template
 
-Here's where I got this template btw, also don't forget to follow me on my social media links.
+Here's where I got this template, btw. Also,  don't forget to follow me on my social media links.
 
 👉 [📒](https://github.com/othneildrew/Best-README-Template)
 
