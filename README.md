@@ -207,9 +207,9 @@
 
 ![Banner][java-logo]
 
-Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
+&emsp;Hello! I'm Colston D. Bod-oy; I'm a React and Android developer, and I would be taking my 3rd year of college at the time that I made this repo. I'm an aspiring developer, and I would like to work for the big FAANG companies someday 😉.    
   
-I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
+&emsp;I created this project so I could keep track of and recall things that I didn't know I could do in Java and Kotlin, as I've just recently started learning them on a deeper level. I hope you'll find these notes useful! 😎.
 
 
 ### README Template
@@ -341,7 +341,7 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/4
 
 First, the set view of the mappings was obtained to create a new stream, and then we applied the ```Stream.collect()``` method, which performed a mutable reduction operation on the elements of the stream. A mutable reduction operation collects input elements into a mutable container, such as a ```Collection```, as it processes the elements of the stream.  
   
-We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and stores the end result in a map. The ```Collector``` makes a Map<K, List<T>>, whose keys are the values resulting from applying the classification function to the input elements. Each value of those keys is a ```List``` containing the input elements, which map to the associated key.  
+We use the ```Collectors.groupingBy()``` method to return a ```Collector``` that groups objects by a given specific property and stores the end result in a map. The ```Collector``` makes a ```Map<K, List<T>>```, whose keys are the values resulting from applying the classification function to the input elements. Each value of those keys is a ```List``` containing the input elements, which map to the associated key.  
   
 In the first example, we used ```Entry.getValue()``` as our classification function and ```Collectors.mapping()``` to apply a reduction operation to the values associated with a given key. Using ```Entry.getKey()``` as our mapping function, we're able to reduce our data to only use keys as values. Finally, ```Collectors.toList()``` was used as the downstream collector to accept the mapped values.  
   
