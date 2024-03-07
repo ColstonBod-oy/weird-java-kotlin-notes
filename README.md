@@ -70,8 +70,8 @@
         <details>
           <summary>1a.J</summary>
           <ul>
-            <li><a href="#1a.J-example">1a.J Example</a></li>
-            <li><a href="#1a.J-description">1a.J Description</a></li>
+            <li><a href="#1a-J-example">1a.J Example</a></li>
+            <li><a href="#1a-J-description">1a.J Description</a></li>
           </ul>
         </details>
       </li>
@@ -223,7 +223,7 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
 
 I found these examples on [Stack Overflow](https://stackoverflow.com/questions/39891112/get-an-array-from-a-map-and-convert-the-keys) which converts a set of map keys into an array.
 
-### 1a.J Example
+### 1a-J Example
 
   ```java
   import java.util.Arrays;
@@ -271,7 +271,7 @@ I found these examples on [Stack Overflow](https://stackoverflow.com/questions/3
   }
   ```
 
-### 1a.J Description
+### 1a-J Description
 
 We used the ```keySet()``` method of the ```HashMap``` class to get a set view of the keys contained in our map, then we create a new stream from those keys so we could apply common stream operations like ```mapToInt()``` which maps a stream to an ```IntStream``` where we could also do things like ```Integer.intValue()``` which returns the value of the specified ```Integer``` object as an ```int``` primitive data type.  
   
