@@ -63,10 +63,10 @@
     </li>
   </ol>
   <details>
-    <summary>Java</summary>
+    <summary>🔖 Java</summary>
     <ol>
       <li>
-        <a href="#get-an-array-of-maps-keys">📄 Get An Array Of Map's Keys</a>
+        <a href="#📑-get-an-array-of-maps-keys">📄 Get An Array Of Map's Keys</a>
         <details>
           <summary>1a-J</summary>
           <ul>
