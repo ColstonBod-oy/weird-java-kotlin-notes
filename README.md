@@ -70,7 +70,7 @@
         <details>
           <summary>1a.J</summary>
           <ul>
-            <li><a href="#1a.J-examples">1a.J Example</a></li>
+            <li><a href="#1a.J-example">1a.J Example</a></li>
             <li><a href="#1a.J-description">1a.J Description</a></li>
           </ul>
         </details>
