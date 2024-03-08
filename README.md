@@ -24,7 +24,7 @@
 <br/>
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Weird Java & Kotlin Notes</h3>
@@ -1078,4 +1078,4 @@ Btw, here's where I got this template. Also, don't forget to follow me on my soc
   
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[java-logo]: images/java-logo.png
+[java-logo]: /images/java-logo.png
