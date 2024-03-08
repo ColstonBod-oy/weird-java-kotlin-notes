@@ -32,4 +32,5 @@ jobs:
 
       # Runs a set of commands to install and run mkdocs
       - run: pip install mkdocs
+      - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force --clean --verbose
