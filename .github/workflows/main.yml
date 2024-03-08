@@ -13,24 +13,39 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  mkdocs:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Sets up python
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+        # https://github.com/mkdocs/mkdocs/issues/2370
         with:
-          python-version: 3.x
+          fetch-depth: 0
 
-      # Runs a set of commands to install and generate mkdocs
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v2
+
+      - name: Copy CI gradle.properties
+        run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
+          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
       - name: Generate Docs
         run: |
           pip install mkdocs mkdocs-material Pygments
@@ -38,3 +53,7 @@ jobs:
           mv build/dokka/gfmMultiModule docs
           cat README.md > docs/index.md
           mkdocs gh-deploy
+
+# https://github.com/softprops/action-gh-release/issues/236
+permissions:
+  contents: write
