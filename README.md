@@ -74,8 +74,8 @@
         <details>
           <summary>1a-J</summary>
           <ul>
-            <li><a href="#1a-J-example">1a-J ▶️Example</a></li>
-            <li><a href="#1a-J-description">1a-J 💡Description</a></li>
+            <li><a href="#1a-j-example">1a-J ▶️Example</a></li>
+            <li><a href="#1a-j-description">1a-J 💡Description</a></li>
           </ul>
         </details>
       </li>
@@ -84,8 +84,8 @@
         <details>
           <summary>2a-J</summary>
           <ul>
-            <li><a href="#2a-J-example">2a-J ▶️Example</a></li>
-            <li><a href="#2a-J-description">2a-J 💡Description</a></li>
+            <li><a href="#2a-j-example">2a-J ▶️Example</a></li>
+            <li><a href="#2a-j-description">2a-J 💡Description</a></li>
           </ul>
         </details>
       </li>
