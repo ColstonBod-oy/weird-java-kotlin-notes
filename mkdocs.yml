@@ -30,42 +30,4 @@ theme:
         icon: material/weather-sunny
         name: Switch to system preference
 
-  features:
-    - navigation.tabs
-    - navigation.indexes
-    - navigation.top
-    - content.action.view
-    - content.code.copy
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
-
-extra:
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-
-  social:
-    - icon: fontawesome/solid/paper-plane
-      link: https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com
-    - icon: fontawesome/brands/github
-      link: https://github.com/ColstonBod-oy
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/colston-bod-oy-60a7521a4/
-
-plugins:
-  - search
-  - tags
-
 copyright: Copyright &copy; 2024 Colston Bod-oy
