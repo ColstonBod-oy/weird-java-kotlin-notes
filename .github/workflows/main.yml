@@ -33,6 +33,6 @@ jobs:
       # Runs a set of commands to install and run mkdocs
       - name: Generate Docs
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material Pygments
           cat README.md > docs/index.md
           mkdocs gh-deploy --force --clean --verbose
