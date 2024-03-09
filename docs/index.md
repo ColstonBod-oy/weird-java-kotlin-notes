@@ -1,1 +1,4 @@
-
+---
+hide:
+  - navigation
+---
