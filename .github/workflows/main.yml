@@ -35,4 +35,11 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material Pygments
           cat README.md > docs/index.md
+          echo "---" > temp_file
+          echo "title: " >> temp_file
+          echo "hide:" >> temp_file
+          echo "  - navigation" >> temp_file
+          echo "---" >> temp_file
+          cat docs/index.md >> temp_file
+          mv temp_file docs/index.md
           mkdocs gh-deploy --force --clean --verbose
