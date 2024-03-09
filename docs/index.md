@@ -1,2 +1,1 @@
-hide:
-  - navigation
+
