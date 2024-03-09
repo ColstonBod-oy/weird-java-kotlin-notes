@@ -29,11 +29,9 @@ theme:
 
   features:
     - navigation.top
+    - navigation.instant
     - content.action.view
     - content.code.copy
-
-extra_css: 
-  - extra.css
 
 markdown_extensions:
   - pymdownx.highlight:
