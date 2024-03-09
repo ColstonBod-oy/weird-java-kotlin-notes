@@ -5,32 +5,29 @@ repo_url: https://github.com/ColstonBod-oy/weird-java-kotlin-notes
 
 theme:
   name: material
-  
-palette:
+  palette:
+
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: white
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
+      scheme: default 
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-4
         name: Switch to system preference
 
-features:
+  features:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
