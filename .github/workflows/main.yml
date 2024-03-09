@@ -37,6 +37,7 @@ jobs:
           cat README.md > docs/index.md
           echo "---" > temp_file
           echo "hide:" >> temp_file
+          echo "  - title" >> temp_file
           echo "  - navigation" >> temp_file
           echo "---" >> temp_file
           cat docs/index.md >> temp_file
