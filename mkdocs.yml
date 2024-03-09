@@ -1,3 +1,8 @@
+---
+hide:
+ - navigation
+---
+
 site_name: Weird Java & Kotlin Notes
 site_url: https://ColstonBod-oy.github.io/weird-java-kotlin-notes/
 repo_name: weird-java-kotlin-notes
