@@ -28,8 +28,11 @@ theme:
         name: Switch to system preference
 
   features:
+    - header.autohide
+    - hide.navigation
     - navigation.top
     - navigation.instant
+    - navigation.instant.progress
     - content.action.view
     - content.code.copy
 
