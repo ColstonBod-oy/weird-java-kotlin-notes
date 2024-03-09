@@ -1,3 +1,4 @@
-.md-sidebar__inner {
+/*  Navigation sidebar */
+.md-nav--primary {
   display: none;
 }
