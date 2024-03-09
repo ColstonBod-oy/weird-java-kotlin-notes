@@ -32,8 +32,7 @@ theme:
     - content.action.view
     - content.code.copy
 
-  material:
-    nav: false
+extra_css: [extra.css]
 
 markdown_extensions:
   - pymdownx.highlight:
