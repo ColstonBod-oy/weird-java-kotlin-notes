@@ -5,6 +5,8 @@ repo_url: https://github.com/ColstonBod-oy/weird-java-kotlin-notes
 
 theme:
   name: material
+  nav: false
+  toc: false
   palette:
 
     # Palette toggle for automatic mode
@@ -28,8 +30,6 @@ theme:
         name: Switch to system preference
 
   features:
-    - navigation.tabs
-    - navigation.indexes
     - navigation.top
     - content.action.view
     - content.code.copy
