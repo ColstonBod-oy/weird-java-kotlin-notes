@@ -35,5 +35,5 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material Pygments
           cat README.md > docs/index.md
-          sed -i '1,10s/^/"---\nhide:\n  - navigation\n---" /' docs/index.md
+          sed -i '1s/^/"---\nhide:\n  - navigation\n---" /' docs/index.md
           mkdocs gh-deploy --force --clean --verbose
