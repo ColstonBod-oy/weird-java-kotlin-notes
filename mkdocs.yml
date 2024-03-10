@@ -75,12 +75,12 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/ColstonBod-oy
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/atick-faisal
+      link: https://www.linkedin.com/in/colston-bod-oy-60a7521a4/
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/colston.bodoy/
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/coldz.stone/
-    - icon: fontawesome/brands/x/twitter
+    - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/OyColston
 
 plugins:
