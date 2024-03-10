@@ -41,10 +41,15 @@ extra_css:
 markdown_extensions:
   - meta
   - pymdownx.highlight:
+      use_pygments: true
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.superfences
 
@@ -64,11 +69,11 @@ extra:
       link: https://github.com/atick-faisal
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/atick-faisal
-    - icon: fontawesome/brands/medium
+    - icon: fontawesome/brands/facebook
       link: https://atickfaisal.medium.com
-    - icon: fontawesome/brands/stack-overflow
+    - icon: fontawesome/brands/instagram
       link: https://stackoverflow.com/users/12737399/atick-faisal
-    - icon: fontawesome/brands/researchgate
+    - icon: fontawesome/brands/twitter
       link: https://scholar.google.com/citations?user=ZiPKjAgAAAAJ&hl=en
 
 plugins:
