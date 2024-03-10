@@ -42,14 +42,21 @@ markdown_extensions:
   - meta
   - pymdownx.highlight:
       use_pygments: true
+      linenums: true
+      linenums_style: pymdownx-inline
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.inlinehilite
+  - pymdownx.arithmatex
+  - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.keys
   - pymdownx.snippets
   - pymdownx.superfences
 
@@ -64,17 +71,17 @@ extra:
 
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:atickfaisal@gmail.com
+      link: https://mail.google.com/mail/?view=cm&fs=1&to=bodoycolstond@gmail.com
     - icon: fontawesome/brands/github
-      link: https://github.com/atick-faisal
+      link: https://github.com/ColstonBod-oy
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/atick-faisal
     - icon: fontawesome/brands/facebook
-      link: https://atickfaisal.medium.com
+      link: https://www.facebook.com/colston.bodoy/
     - icon: fontawesome/brands/instagram
-      link: https://stackoverflow.com/users/12737399/atick-faisal
-    - icon: fontawesome/brands/twitter
-      link: https://scholar.google.com/citations?user=ZiPKjAgAAAAJ&hl=en
+      link: https://www.instagram.com/coldz.stone/
+    - icon: fontawesome/brands/x/twitter
+      link: https://twitter.com/OyColston
 
 plugins:
   - search
