@@ -34,32 +34,26 @@ theme:
     - navigation.instant.progress
     - content.action.view
     - content.code.copy
+    - content.code.select
 
 extra_css:
   - extra.css
 
 markdown_extensions:
   - meta
-  - codehilite
   - pymdownx.highlight:
-      use_pygments: true
-      linenums: true
-      linenums_style: pymdownx-inline
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.inlinehilite
-  - pymdownx.arithmatex
+  - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.details
-  - pymdownx.keys
-  - pymdownx.snippets
-  - pymdownx.superfences
 
 extra:
   consent:
